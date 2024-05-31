@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Asian Cuisine</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    .recipe-card {
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("dessertsbg.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Asian Cuisine</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="recipe1.html"><img src="macaroons1.png" alt="Dessert 1"></a>
+    <a href="recipe1.html"><h2>Laksa</h2></a>
+    <p>Description of Dessert 1 goes here.</p>
+  </div>
+
+  <div class="recipe-card">
+    <img src="dessert2.jpg" alt="Dessert 2">
+    <h2>Nasi Goreng</h2>
+    <p>Description of Dessert 2 goes here.</p>
+  </div>
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="dessert3.jpg" alt="Dessert 3">
+    <h2>Szechuan Mapo Tofu</h2>
+    <p>Description of Dessert 3 goes here.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="dessert4.jpg" alt="Dessert 4">
+    <h2>Satay</h2>
+    <p>Description of Dessert 4 goes here.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="dessert4.jpg" alt="Dessert 4">
+    <h2>Kimchi </h2>
+    <p>Description of Dessert 4 goes here.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="dessert4.jpg" alt="Dessert 4">
+    <h2>Dim Sum</h2>
+    <p>Description of Dessert 4 goes here.</p>
+  </div>
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Mexican Cuisine</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    .recipe-card {
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("mexcian.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Mexican Cuisine</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="recipe1.html"><img src="macaroons1.png" alt="Dessert 1"></a>
+    <a href="recipe1.html"><h2>macaroons</h2></a>
+    <p>macaron, sweet, small, round French sandwich cookie made from meringue, almond flour, sugar, and food colouring and adorned with a variety of fillings including buttercream, chocolate ganache, marzipan, jam, and fruit compote..</p>
+  </div>
+
+  <div class="recipe-card">
+    <img src="https://media.istockphoto.com/id/502641852/photo/meat-cannelloni-sauce-bechamel.jpg?s=612x612&w=0&k=20&c=2zAFqYmv1sunZNKF3lrAPMkDKM3tBZxI8CPoG5XIJeg=" alt="Dessert 2">
+    <h2>Enchiladas</h2>
+    <p> An enchilada is a Mexican dish that's made from tortillas wrapped around meat or cheese, and cooked in a spicy sauce.</p>
+  </div>
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/182519187/photo/chiles-rellenos.jpg?s=612x612&w=0&k=20&c=ycsVRRuUIcl2AajengO0CVGWo9v2zXBOVJwuE03h9p4=" alt="Dessert 3">
+    <h2>Chiles Rellenos</h2>
+    <p>traditional Mexican dish made from roasted poblano peppers stuffed with cheese, then coated in a fluffy egg batter and fried until golden brown..</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/175197167/photo/tasting-a-chicken-tamale.jpg?s=612x612&w=0&k=20&c=pfWETTv2_MX-qYvZ05IppZqVg_hGVt15MoIUcF6LPB8=" alt="Dessert 4">
+    <h2>Tamales</h2>
+    <p>Tamales are a traditional Mexican dish made with a corn based dough mixture that is filled with various meats or beans and cheese. Tamales are wrapped and cooked in corn husks or banana leaves, but they are removed from the husks before eating.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1427138342/photo/mexican-tomato-salsa-with-lime-onion-jalapeno-pepper-parsley-and-tortilla-chips.jpg?s=2048x2048&w=is&k=20&c=-Gptzf3IdoHt4nUYYo6FEFi_yZWacDD5m6MrsvL-ghg=" alt="Dessert 4">
+    <h2>Salsa </h2>
+    <p>A hot sauce of tomatoes and chile peppers with onion and garlic, and sometimes seasoned with cumin or fresh cilantro, often used as a condiment or served as a dip.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1213404168/photo/mexican-shrimp-ceviche-with-tomato-and-serrano-pepper-on-wooden-background.jpg?s=2048x2048&w=is&k=20&c=KiFKDrS980zs_oDkQq6DT1Q6iJRkYd8bq_ZgC4X-tTI=" alt="Dessert 4">
+    <h2>Ceviche  </h2>
+    <p>Ceviche is a seafood dish where diced cubes of raw fish, marinated in a lemon or lime juice mixture</p>
+  </div>
+
+
+    <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/474048190/photo/nachos-supreme.jpg?s=2048x2048&w=is&k=20&c=AVRP4yl8AHBCwVyrb2L7BYsAVHut7RuMwiQPrU1zhWQ=" alt="Dessert 4">
+    <h2>Nachos  </h2>
+    <p>Nachos is a Mexican culinary dish consisting of tortilla chips or totopos covered with cheese or cheese sauce, as well as a variety of other toppings and garnishes, often including meats </p>
+  </div>
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/186281219/photo/homemade-bean-quesadilla-with-salsa-and-corn.jpg?s=2048x2048&w=is&k=20&c=oILg55JBm8AGZoHJW9U9jSn0K7Kx9iuDgacRGf6IAvE=" alt="Dessert 4">
+    <h2>Quesadilla  </h2>
+    <p>Mexican dish consisting of a tortilla that is filled primarily with cheese, and sometimes meats, spices, and other fillings, and then cooked on a griddle or stove. </p>
+  </div>
+   
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1266334787/photo/fajitas-de-pollo-chicken-marinated-tortillas-with-onions-and-peppers.jpg?s=612x612&w=0&k=20&c=62rRkNAcwAC5hVhOByXpmHqIprKI--w8WGanUNFR6-c=" alt="Dessert 4">
+    <h2>Fajita </h2>
+    <p>Fajitas are a popular Tex-Mex dish made from grilled meat, usually beef or chicken, which is served on a sizzling hot skillet along with grilled onions and peppers. The meat and vegetables are served with warm tortillas, guacamole, sour cream, and salsa, allowing diners to create their own unique flavor combinations. </p>
+  </div>
+  
+
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/491811072/photo/chiles-en-nogada-mexican-food.jpg?s=612x612&w=0&k=20&c=F1yZsW0BRI-yI9f_-9_OxmCyr0zLMHBboMHoUeZ808I=" alt="Dessert 4">
+    <h2>Chiles en nogada </h2>
+    <p>Chiles en Nogada is a Mexican dish comprised of Poblano chiles and picadillo, a type of hash made of meat and dried fruit. The dish is covered in a walnut sauce, pomegranate seeds </p>
+  </div>
+
+
+     <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1174042861/photo/mexican-red-pozole-soup-on-wooden-background.jpg?s=612x612&w=0&k=20&c=P5AGzkZk3t_P5uFqYYMjphXogwxdgLnCXnpe8M74Lm8=" alt="Dessert 4">
+    <h2>Pozole </h2>
+    <p>It is made from hominy with meat (typically chicken or pork), and can be seasoned and garnished with shredded lettuce or cabbage, chilli peppers, onion, garlic, radishes, avocado, salsa or limes. </p>
+  </div>
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/516980542/photo/huevos-rancheros-breakfast-pizza.jpg?s=612x612&w=0&k=20&c=bmNBJi_Yr9fKV94AXwlO_MOwyLjq9icfo5AZTq91LJs=" alt="Dessert 4">
+    <h2>Huevos Rancheros </h2>
+    <p>Huevos rancheros (or rancher's eggs) are a typical breakfast served at Mexican farms, featuring corn tortillas and fried eggs topped with plenty of warmed salsa. </p>
+  </div>  
+
+   
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1275661164/photo/tlayuda-mexican-traditional-food-from-oaxaca-mexico.jpg?s=612x612&w=0&k=20&c=5lVBSe0dQ7EyRdOYEcugh4lGOR4tvdpA-ZfU1dhoKNM=" alt="Dessert 4">
+    <h2>Tlayuda </h2>
+    <p>Tlayuda (Spanish pronunciation: [tɬaˈʝuða]), sometimes spelled clayuda, is a handmade dish in traditional Oaxacan cuisine, consisting of a large, thin, crunchy, partially fried or toasted tortilla covered with a spread of refried beans, asiento  </p>
+  </div>
+
+
+     <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1302277540/photo/homemade-chicken-taquitos-dorados-with-dipping-sauces-and-food-ingredients.jpg?s=612x612&w=0&k=20&c=K7XICSsqJfyrJbHaixTcobZA5xxjX8C-nXjexUv52T8=" alt="Dessert 4">
+    <h2>Flautas </h2>
+    <p>Ta tightly rolled corn tortilla filled with shredded meat, chopped vegetables, or cheese, usually deep fried and garnished with sour cream, guacamole, or salsa. </p>
+  </div>
+
+  
+
+
+     <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1022688558/photo/choked-cake.jpg?s=612x612&w=0&k=20&c=gasVgHkc-WawR5Vg7U4h9FN_mZ5HhpdKE8xMejezY1Q=" alt="Dessert 4">
+    <h2>Torta Ahogada (Drowned Baguuette) </h2>
+    <p>A torta is a sandwich served on a roll or bun. Torta's can come in many varieties and can be served both hot or cold. Your torta mexicana can be filled with a wide variety of ingredients including different types of meats and cheeses with beans, avocado, peppers, etc. </p>
+  </div> 
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/516809277/photo/traditional-hungarian-dish-bograch-goulash.jpg?s=612x612&w=0&k=20&c=9fI1eQBVprpdQo5v8NFm7U9Cm-GUmEgvJvAZsb_y3Qs=" alt="Dessert 4">
+    <h2>  Aztec soup </h2>
+    <p>  an soup is a pasilla chile- and tomato-based broth that is then tailored to individual tastes at the table with myriad options for garnishes, including crispy fried tortillas, chicken, avocado, chicharrones, cilantro, salsa and limes. </p>
+  </div>
+   
+   
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>

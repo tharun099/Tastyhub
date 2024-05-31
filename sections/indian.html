@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Indian Cuisine</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    .recipe-card {
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("dessertsbg.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Indian Cuisine</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/488481490/photo/fish-biryani-with-basmati-rice-indian-food.jpg?s=612x612&w=0&k=20&c=9xEw3VOQSz9TP8yQr60L47uExyKF9kogRhQdlghlC00=" alt="Dessert 1"></a>
+    <a href="recipebox.html"><h2>Biryani</h2></a>
+    <p> Fragrant basmati rice cooked with spices, herbs, and a choice of meat or vegetables, creating a flavorful Indian delicacy.</p>
+  </div>
+
+  <div class="recipe-card">
+   <a href="recipebox.html"> <img src="https://media.istockphoto.com/id/1472620857/photo/tasty-butter-chicken-curry-dish-from-indian-cuisine.jpg?s=612x612&w=0&k=20&c=7Lf1Qrwj7sY31LuzbO9u8KMFuoUo96SwOvxz5YL_Slw=" alt="Dessert 2"></a>
+   <a href="recipebox.html"> <h2>Butter Chicken (Murgh Makhani)</h2></a>
+    <p>Succulent chicken pieces simmered in a luscious tomato and butter sauce, offering a creamy and indulgent taste..</p>
+  </div>
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/942176766/photo/grilled-paneer-tikka-cheese-kebab.jpg?s=612x612&w=0&k=20&c=3B1XCWWVzMmYfv93S2nthMteZ_29dGhw-sdwqv28a1s=" alt="Dessert 3"></a>
+    <a href="recipebox.html"><h2>Paneer Tikka</h2></a>
+    <p>Cubes of marinated paneer and vegetables grilled to perfection, offering a delightful vegetarian appetizer.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+   <a href="recipebox.html"> <img src="https://media.istockphoto.com/id/1328524499/photo/katlambe-chole.jpg?s=612x612&w=0&k=20&c=HDi8bCqvSsObfyfeVMQ2J6noJvazvKKtY5kKaVgvYCQ="></a>
+    <a href="recipebox.html"><h2>Chole Bhature</h2></a>
+    <p> A North Indian favorite featuring spicy chickpea curry paired with deep-fried bread, bhature.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1396604313/photo/roasted-whole-chicken-legs-with-condiment-directly-above-photo.jpg?s=612x612&w=0&k=20&c=JDs72E-fX5SdcBQREta58T82W8zO_rFiKC7d1WwEEUE=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Tandoori Chicken </h2></a>
+    <p> Marinated chicken cooked in a tandoor (clay oven) for smoky, charred perfection.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1446165872/photo/mutton-rogan-josh-or-mutton-masala-is-indias-famous-spicy-nonvegetarian-dish-its-made-out-of.jpg?s=612x612&w=0&k=20&c=fE4MewZoTNH-GeQKyVj-028nB4_3kKI182KuhHlArt8=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Rogan Josh  </h2></a>
+    <p>Aromatic Kashmiri lamb curry with a vibrant red color and a harmonious blend of spices.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/971676568/photo/homemade-healthy-palak-paneer-bowl.jpg?s=612x612&w=0&k=20&c=aAE0fk-gF9XkgALJ_FfQvDFQrLHLu2dEqaeaHIXA5X8=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Palak Paneer  </h2></a>
+    <p>Soft paneer (Indian cheese) cubes in a creamy spinach gravy, providing a wholesome and vegetarian delight.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1307786741/photo/khaman-dhokla.jpg?s=612x612&w=0&k=20&c=GUV-2jUzT359levs19OjSnaJShLcE4JtfC8nnzw5RjI=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Dhokla  </h2></a>
+    <p>Steamed and spongy gram flour cakes, seasoned with mustard seeds and curry leaves, known for their light and tangy flavor.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1156896083/photo/cheese-masala-dosa-recipe-with-sambar-and-chutney-selective-focus.jpg?s=612x612&w=0&k=20&c=Wyy0uUGXfQn7JstC8w0DsxWJVGnqWUJUCG53a42UH9s=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Masala Dosa  </h2></a>
+    <p>South Indian crispy rice crepes filled with a spiced potato mixture, often served with coconut chutney and sambar.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1410295305/photo/butter-chicken-korma-served-in-dish-isolated-on-dark-background-side-view.jpg?s=612x612&w=0&k=20&c=CnzAM0RO2HPrqr-jMv5aidjcW0tT1ATDQGg_8I6d_2w=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Vindaloo  </h2></a>
+    <p> A fiery Goan curry featuring marinated meat (usually pork or lamb) in a tangy and spicy sauce.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1077112128/photo/malai-kofta-is-a-mughlai-speciality-dish-served-in-a-bowl-or-pan-over-moody-background.jpg?s=612x612&w=0&k=20&c=2aAuoVgBE0BENv6D2rOhMCqMVtBzGauCDp8cq8Mntxc=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Malai Kofta  </h2></a>
+    <p>Deep-fried vegetable or paneer balls in a creamy tomato-based gravy, known for its decadent richness.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1334569591/photo/indian-vegetarian-meal-paratha.jpg?s=612x612&w=0&k=20&c=Id4BpPwoYMllAGzd5Do4zHtKmXjpbvXwCB9jun2Upw4=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Aloo Paratha  </h2></a>
+    <p>Stuffed Indian flatbread with spiced mashed potatoes, typically enjoyed with yogurt and pickles.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1333127675/photo/chicken-biryani-spicy-indian-malabar-biryani-hyderabadi-biryani-dum-biriyani-pulao-golden.jpg?s=612x612&w=0&k=20&c=cuof8o-8VkdKw2EuDV6XTOFjqQBobiff5ugsBwD4Erg=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Hyderabadi Biryani  </h2></a>
+    <p>A South Indian biryani variation, prepared with fragrant rice, succulent meat, and aromatic spices, often accompanied by raita.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1307785362/photo/asian-samosa.jpg?s=612x612&w=0&k=20&c=BZVD4A-1R6g03ohDPwe3lEK94FReObUWFQEdo83SgL8=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Samosa  </h2></a>
+    <p>Triangular pastry filled with spiced potatoes, peas, and sometimes meat, popular as a savory snack or appetizer.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1311821100/photo/chilli-paneer-indian-snack-food.jpg?s=612x612&w=0&k=20&c=yYwVPYZakDpqANo_rdJy2IcoVaisdph6DNmd_lCGMP4=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Tikka Masala  </h2></a>
+    <p>Tender chunks of chicken or paneer in a creamy tomato-based sauce, renowned for its rich and spiced profile.</p>
+  </div>
+
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Healthy Salads</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    .recipe-card {
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("dessertsbg.jpeg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Healthy Salads</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/465960745/photo/bowl-of-greek-salad.jpg?s=612x612&w=0&k=20&c=0x-ePJWXQVcvI0wl_2MVCWcAJg0rvjSo5Sjll7NZzxA=" alt="Dessert 1"></a>
+    <a href="recipebox.html"><h2>Greek Salad (Horiatiki)</h2></a>
+    <p>Horiatiki, a classic Greek salad, originated in rural Greece, featuring fresh tomatoes, cucumbers, onions, olives, and feta cheese, drizzled with olive oil – a timeless Mediterranean delight.</p>
+  </div>
+
+  <div class="recipe-card">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1412464690/photo/caprese-salad-with-mozzarella-tomatoes-and-basil.jpg?s=612x612&w=0&k=20&c=Tw7wXYTVUepcYsSZrJB2oBA5hyn2hJEEvzmO58qA3sw=" alt="Dessert 2"></a>
+    <a href="recipebox.html"><h2>Caprese Salad</h2></a>
+    <p>A harmonious medley of ripe tomatoes, fresh mozzarella, fragrant basil, and drizzled with balsamic glaze.</p>
+  </div>
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/609791046/photo/som-tum.jpg?s=612x612&w=0&k=20&c=ufIcXQf92UUmiebO2SdUupE9QT5pxRC-UijhN3UJero=" alt="Dessert 3"></a>
+    <a href="recipebox.html"><h2>Thai Green Papaya Salad (Som Tum)</h2></a>
+    <p> A vibrant and spicy symphony of shredded papaya, chili, lime, and herbs, creating a burst of flavors in every bite.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/480114420/photo/grilled-shrimp-caesar-salad.jpg?s=612x612&w=0&k=20&c=z_aG3OFsUDC77C_GtSTM-D6lN7f8YTwNmjmK16T7vxY=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Caesar Salad</h2></a>
+    <p>An elegant fusion of crisp romaine lettuce, artisanal croutons, velvety Caesar dressing, and delicate Parmesan shavings, embodying culinary refinement.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/638197896/photo/healthy-organic-quinoa-tabouli-salad.jpg?s=612x612&w=0&k=20&c=gdkzYahN7rKnkXi8aGuS_Q0QaIOhixNu-UzGM5TZrAY=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Tabbouleh </h2></a>
+    <p> A vibrant Middle Eastern salad featuring finely chopped parsley, tomatoes, mint, bulgur wheat, and zesty lemon dressing, bursting with fresh and tangy flavors.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1140106329/photo/healthy-bowl-kale-and-quinoa-salad-with-cranberry-red-onions-and-almonds.jpg?s=612x612&w=0&k=20&c=Tuu0qxWJxWohfmn-BwHPKNyEV6Dt245173XYrOwuCgM=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Quinoa Salad  </h2></a>
+    <p>A wholesome medley of protein-rich quinoa, colorful vegetables, and a delightful vinaigrette, delivering a nutritious and satisfying culinary experience.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1395776576/photo/homemade-healthy-green-goddess-cobb-salad.jpg?s=612x612&w=0&k=20&c=zL8BYVa31VVa-SdRE-zF-AeTUxt-PjgulWl3GzzVewU=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Cobb Salad  </h2></a>
+    <p>A hearty American salad featuring grilled chicken, crispy bacon, avocado, hard-boiled eggs, tomatoes, blue cheese, and greens, all topped with a tangy dressing.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/598567746/photo/homemade-autumn-apple-walnut-spinach-salad.jpg?s=612x612&w=0&k=20&c=OFsfd4QAjuapnyeUjhqwl8TVQTW-lmVn_dQzbIEyy7M=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Waldorf Salad   </h2></a>
+    <p>A classic American salad composed of crisp apples, celery, walnuts, and grapes, dressed in creamy mayonnaise or yogurt dressing, offering a sweet and savory harmony of flavors and textures.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+   <a href="recipebox.html"> <img src="https://media.istockphoto.com/id/1158342573/photo/nicoise-salad-at-plate-with-bread-lemon-salt-and-pepper-mill.jpg?s=612x612&w=0&k=20&c=XGVhcL--ixm7xTZ6sCO4FMSPYyYx6YPQJMinMJQIcbQ=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Nicoise Salad  </h2></a>
+    <p>A French delight, showcasing tuna, hard-boiled eggs, green beans, olives, and potatoes, harmoniously drizzled with a zesty vinaigrette.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/1498113924/photo/homemade-oi-muchim-is-a-korean-spicy-cucumber-salad-mixed-with-seasonings-closeup-on-the-bowl.jpg?s=612x612&w=0&k=20&c=6muh7OcQNDo1dZkzPA58N9ydkKZKliAowBw9-F89HLQ=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Kimchi Salad   </h2></a>
+    <p>A Korean sensation with fermented Napa cabbage or radishes.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+   <a href="recipebox.html"> <img src="https://media.istockphoto.com/id/860523826/photo/fattoush-salad.jpg?s=612x612&w=0&k=20&c=cIzAF_JT9qoqCNRUoSMsF3ofUfKaWi0a5aYXGu2zbNk=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Fattoush  </h2></a>
+    <p>A Mediterranean mix of greens, veggies, and crispy pita bread.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/918132306/photo/winter-panzanella-salad.jpg?s=612x612&w=0&k=20&c=Xr1fqYmy98vRqrsnCq0bO1Z3h7xvPInp0tjXQ7Z18ic=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Panzanella  </h2></a>
+    <p>An Italian bread salad with tomatoes, onions, and basil.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+   <a href="recipebox.html"> <img src="https://media.istockphoto.com/id/1295815297/photo/close-up-image-of-homemade-coleslaw-shredded-red-cabbage-grated-carrot-sliced-onion.jpg?s=612x612&w=0&k=20&c=ozvmuY-1otWMXlsoqy9uirYQHpDytl09lKb4haBbcho=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Coleslaw   </h2></a>
+    <p>A creamy American favorite of shredded cabbage and carrots.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+   <a href="recipebox.html"> <img src="https://media.istockphoto.com/id/1360064630/photo/homemade-spring-rolls-with-vegetables-and-sauces.jpg?s=612x612&w=0&k=20&c=CNqjN9DeR1vDYKtCrCbCHCJaJxdN3oQ285lQ1ify6JE=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Chinese Chicken Salad   </h2></a>
+    <p>A fusion salad with chicken, cabbage, and Asian-inspired dressing.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipebox.html"><img src="https://media.istockphoto.com/id/842586668/photo/warm-beetroot-salad-with-arugula-raisins-and-feta.jpg?s=612x612&w=0&k=20&c=w0dTwphQAvYdJF9XEvigcZmVohjIpsk7_CHElmPhXEk=" alt="Dessert 4"></a>
+    <a href="recipebox.html"><h2>Beet and Goat Cheese Salad   </h2></a>
+    <p> A gourmet delight featuring roasted beets, goat cheese, and greens.</p>
+  </div>
+
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>

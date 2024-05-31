@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>project</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("ff.jpg");
+  min-height: 90%;
+}
+.w3-right {
+  display: flex;
+  align-items: center;
+}
+
+.w3-right a {
+  margin-left: 20px;
+}
+.w3-right input[type="text"] {
+  padding: 6px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.w3-right button {
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Add responsive styles for the search bar on smaller screens */
+@media screen and (max-width: 600px) {
+  .w3-right input[type="text"],
+  .w3-right button {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top w3-hide-small">
+  <div class="w3-bar w3-xlarge w3-black w3-opacity w3-hover-opacity-off" id="myNavbar">
+    <a href="#" class="w3-bar-item w3-button">HOME</a>
+    <a href="#content" class="w3-bar-item w3-button">CONTENT</a>
+    <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+    <a href="#contact" class="w3-bar-item w3-button">CONTACT</a>
+    <div class="w3-right">
+      <a href="SIGNIN.html" class="w3-bar-item w3-button">Sign In</a>
+      <a href="SIGNUP.html" class="w3-bar-item w3-button">Sign Up</a>
+    </div>
+  </div>
+</div>
+  
+<!-- Header with image -->
+<header class="bgimg w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-bottomleft w3-padding">
+    <span class="w3-tag w3-xlarge">Innovate. Inspire. Interact.</span>
+  </div>
+  <div class="w3-display-middle w3-center">
+    <span class="w3-text-white w3-hide-small" style="font-size:100px">Recipe Sharing Platform</span>
+    <span class="w3-text-white w3-hide-large w3-hide-medium" style="font-size:60px"><b>Recipe Sharing Platform</b></span>
+
+
+    <div class="w3-center w3-opacity w3-hover-opacity-off" style="display: flex; align-items: center; margin-top: 10px;">
+      <input type="text" placeholder="Search recipes..." style="width: 650px; padding: 6px; border: none; border-radius: 4px;">
+      <button class="w3-button w3-white" style="margin-left: 5px; padding: 6px 12px; background-color: #ffffff; border: none; border-radius: 4px; cursor: pointer;">Search</button>
+      </div>
+
+  </div>
+</header>
+
+<!-- Content Container -->
+<div class="w3-container w3-black w3-padding-64 w3-xxlarge" id="content">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Explore Our Recipe Collections</h1>
+    <div class="w3-row w3-center w3-border w3-border-dark-grey">
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Desserts');" id="myLink">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Elegant Desserts</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Salads');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Healthy Salads</div>
+      </a>
+      <a href="javascript:void(0)" onclick="openMenu(event, 'Starters');">
+        <div class="w3-col s4 tablink w3-padding-large w3-hover-red">Fast Foods</div>
+      </a>
+    </div>
+
+    <div id="Desserts" class="w3-container menu w3-padding-32 w3-white" style="height: 400px; overflow-y: scroll;">
+      <h1><b>Recipe Name 1</b> </h1>
+      <p class="w3-text-grey">Description of the recipe goes here.</p>
+      <hr>
+
+      <h1><b>Recipe Name 2</b> </h1>
+      <p class="w3-text-grey">Description of the recipe goes here.</p>
+      <hr>
+      <!-- Add more dessert recipes here -->
+
+    </div>
+
+    <div id="Salads" class="w3-container menu w3-padding-32 w3-white" style="height: 400px; overflow-y: scroll;">
+      <h1><b>Recipe Name 1</b>  
+      <p class="w3-text-grey">Description of the recipe goes here.</p>
+      <hr>
+   
+      <h1><b>Recipe Name 1</b>  
+      <p class="w3-text-grey">Description of the recipe goes here.</p>
+      <hr>
+      <!-- Add more salad recipes here -->
+
+    </div>
+
+    <div id="Starters" class="w3-container menu w3-padding-32 w3-white" style="height: 400px; overflow-y: scroll;">
+      <h1><b>Recipe Name 1</b> 
+      <p class="w3-text-grey">Description of the recipe goes here.</p>
+      <hr>
+   
+      <h1><b>Recipe Name 2</b> 
+      <p class="w3-text-grey">Description of the recipe goes here.</p>
+      <hr>
+      <!-- Add more starter recipes here -->
+
+    </div>
+
+  </div>
+</div>
+
+<!-- About Container -->
+<div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+    <p>The Recipe Sharing Platform was founded with a vision to bring food enthusiasts together from all around the world. We believe that everyone has a unique recipe to share, and our platform provides a space for individuals to showcase their culinary creations and connect with like-minded food lovers.</p>
+    <p><strong>Our Mission:</strong> To inspire creativity in the kitchen and foster a community of passionate home cooks, professional chefs, and food enthusiasts who can exchange ideas and experiences.</p>
+    <p>Join us on this culinary adventure and unlock the potential of the web for sharing and discovering delicious recipes!</p>
+    <img src="/w3images/kitchen.jpg" style="width:100%" class="w3-margin-top w3-margin-bottom" alt="Kitchen">
+  </div>
+</div>
+
+<!-- Contact -->
+<div class="w3-container w3-padding-64 w3-blue-grey w3-grayscale-min w3-xlarge" id="contact">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:54px">Contact</h1>
+    <p>Have a question or suggestion? Want to share your feedback or a recipe? We'd love to hear from you!</p>
+    <p><span class="w3-tag">FYI!</span> We are always open to new ideas and collaborations to make our platform even better.</p>
+    <p class="w3-xxlarge"><strong>Get in touch:</strong></p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="w3-input w3-padding-16 w3-border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="w3-input w3-padding-16 w3-border" type="email" placeholder="Email" required name="Email"></p>
+      <p><textarea class="w3-input w3-padding-16 w3-border" placeholder="Message" required name="Message"></textarea></p>
+      <p><button class="w3-button w3-light-grey w3-block" type="submit">SEND MESSAGE</button></p>
+    </form>
+  </div>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-48 w3-xxlarge">
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+
+<script>
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+</script>
+
+</body>
+</html>

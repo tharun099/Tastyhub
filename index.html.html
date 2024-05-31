@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Demo</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="banner.css">
+
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+<link href="styles.css" rel="stylesheet" />
+
+<style>
+body, html {height: 100%}
+body,h1,h2,h3,h4,h5,h6 {font-family: "Amatic SC", sans-serif}
+.menu {display: none}
+.bgimg {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("ff.jpg");
+  min-height: 90%;
+}
+.w3-right {
+  display: flex;
+  align-items: center;
+}
+
+.w3-right a {
+  margin-left: 20px;
+}
+.w3-right input[type="text"] {
+  padding: 6px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+}
+
+.w3-right button {
+  margin-top: 10px;
+  margin-left: 5px;
+  padding: 6px 12px;
+  background-color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+
+
+/* Footer Styles */
+.footer {
+  background-color: #000000; /* Dark background color */
+  color: #fff; /* Text color */
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  max-width: 300px;
+  margin: 0 10px;
+}
+
+.nav-item {
+  margin-bottom: 10px;
+}
+
+.nav-link {
+  color: #ccc;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.footer-text {
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+.social-links {
+  margin-top: 20px;
+}
+
+.social-links a {
+  color: #ccc;
+  font-size: 24px;
+  margin: 0 10px;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+.footer-bottom {
+  margin-top: 30px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .social-media a img {
+    width: 36px;
+    height: 36px;
+  }
+
+/*scroller*/
+:root {
+
+  --size: clamp(10rem, 1rem + 40vmin, 30rem);
+  --gap: calc(var(--size) / 14);
+  --duration: 60s;
+  --scroll-start: 0;
+  --scroll-end: calc(-100% - var(--gap));
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+
+
+.marquee {
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+  mask-image: linear-gradient(
+    var(--mask-direction, to right),
+    hsla(0, 24%, 92%, 0),
+    hsl(0 0% 0% / 1) 20%,
+    hsl(0 0% 0% / 1) 80%,
+    hsl(0 0% 0% / 0)
+  );
+}
+
+.marquee__group {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: var(--gap);
+  min-width: 100%;
+  animation: scroll-x var(--duration) linear infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee__group {
+    animation-play-state: paused;
+  }
+}
+
+.marquee--vertical {
+  --mask-direction: to bottom;
+}
+
+.marquee--vertical,
+.marquee--vertical .marquee__group {
+  flex-direction: column;
+}
+
+.marquee--vertical .marquee__group {
+  animation-name: scroll-y;
+}
+
+.marquee--reverse .marquee__group {
+  animation-direction: reverse;
+  animation-delay: -3s;
+}
+
+@keyframes scroll-x {
+  from {
+    transform: translateX(var(--scroll-start));
+  }
+  to {
+    transform: translateX(var(--scroll-end));
+  }
+}
+
+@keyframes scroll-y {
+  from {
+    transform: translateY(var(--scroll-start));
+  }
+  to {
+    transform: translateY(var(--scroll-end));
+  }
+}
+
+
+/* Parent wrapper */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  margin: auto;
+  max-width: 100vw;
+}
+
+.wrapper--vertical {
+  flex-direction: row;
+  height: 100vh;
+}
+
+/* Toggle direction button */
+
+
+
+
+@keyframes fade {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+  :root{
+  --background-dark: #2d3548;
+  --text-light: rgba(255,255,255,0.6);
+  --text-lighter: rgba(255,255,255,0.9);
+  --spacing-s: 8px;
+  --spacing-m: 16px;
+  --spacing-l: 24px;
+  --spacing-xl: 32px;
+  --spacing-xxl: 64px;
+  --width-container: 1200px;
+}
+
+*{
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html{
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+}
+
+body{
+  height: 100%;
+}
+
+.hero-section{
+  align-items: flex-start;
+  background-image: linear-gradient(15deg, #0f4667 0%, #2a6973 150%);
+  display: flex;
+  min-height: 100%;
+  justify-content: center;
+  padding: var(--spacing-xxl) var(--spacing-l);
+}
+
+.card-grid{
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  grid-column-gap: var(--spacing-l);
+  grid-row-gap: var(--spacing-l);
+  max-width: var(--width-container);
+  width: 100%;
+  border-radius: 8px;
+
+}
+
+@media(min-width: 540px){
+  .card-grid{
+    grid-template-columns: repeat(2, 1fr); 
+  }
+}
+
+@media(min-width: 960px){
+  .card-grid{
+    grid-template-columns: repeat(4, 1fr); 
+  }
+}
+
+.card{
+  list-style: none;
+  position: relative;
+  background-color: #f2f6f8;
+  border-radius: 8px;
+
+}
+
+.card:before{
+  content: '';
+  display: block;
+  padding-bottom: 150%;
+  width: 100%;
+  
+}
+
+.card__background{
+  background-size: cover;
+  background-position: center;
+  border-radius: var(--spacing-l);
+  bottom: 0;
+  filter: brightness(1.0) saturate(1.2) contrast(1);
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transform-origin: center;
+  transform: scale(1) translateZ(0);
+  transition: 
+    filter 200ms linear,
+    transform 200ms linear;
+}
+
+.card:hover .card__background{
+  transform: scale(1.05) translateZ(0);
+}
+
+.card-grid:hover > .card:not(:hover) .card__background{
+  filter: brightness(0.5) saturate(0) contrast(1.2) blur(1px);
+}
+
+.card__content{
+  left: 0;
+  padding: var(--spacing-l);
+  position: absolute;
+  top: 0;
+}
+
+.card__category{
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin-bottom: var(--spacing-s);
+  text-transform: uppercase;
+}
+
+.card__heading{
+  color: var(--text-lighter);
+  font-size: 1.9rem;
+  text-shadow: 2px 2px 20px rgba(0,0,0,0.2);
+  line-height: 1.4;
+  word-spacing: 100vw;
+}
+
+
+
+
+
+.thumbnail { 
+  transition: all .2s ease-in-out; 
+  
+  
+} 
+
+.thumbnail:hover { 
+  transform: scale(1.025); 
+  
+}
+.txt-rotate {
+    color: rgb(135, 216, 54); /* Set the text color to white */
+  }
+  
+
+  * {
+  box-sizing: border-box;
+}
+
+.card3 {
+  position: sticky;
+  top: 0;
+}
+
+.card3__inner {
+  will-change: transform;
+  background: white;
+  border-radius: 14px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px hsla(265.3, 20%, 10%, 35%);
+  transform-origin: center top;
+}
+
+.cards3 {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: repeat(var(--cards-count), var(--card-height));
+  gap: 40px 0;
+  
+}
+
+.card3__image-container {
+  display: flex;
+  width: 40%;
+  flex-shrink: 0;
+}
+
+.card3__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  aspect-ratio: 1;
+  
+}
+
+.card3__content {
+  padding: 40px 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card3__title {
+  padding: 0;
+  margin: 0;
+  font-size: 60px;
+  font-weight: 600;
+  color: #16263a;
+}
+
+.card3__description {
+  line-height: 1.4;
+  font-size: 24px;
+  color: #16263a;
+}
+
+.space {
+  height: 90vh;
+}
+
+.space--small {
+  height: 40vh;
+}
+
+@media (max-width: 600px) {
+  .card3__inner {
+    flex-direction: column;
+  }
+
+  .card3__image-container {
+    width: 100%;
+  }
+
+  .card3__image {
+    aspect-ratio: 16 / 9;
+    
+  }
+
+  .card3__title {
+    font-size: 32px;
+  }
+
+  .card3__description {
+    font-size: 16px;
+  }
+
+  .card3__content {
+    padding: 30px 20px;
+  }
+}
+
+
+        section {
+            padding: 60px 0;
+            min-height: 100vh;
+        }
+.contact-info {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+      margin-bottom: 10px;
+}
+.contact-info-icon {
+margin-bottom: 15px;
+}
+.contact-info-item {
+  background: #071c34;
+  padding: 30px 0px;
+}
+.contact-page-sec .contact-page-form h2 {
+  color: #071c34;
+  text-transform: capitalize;
+  font-size: 22px;
+  font-weight: 700;
+}
+.contact-page-form .col-md-6.col-sm-6.col-xs-12 {
+  padding-left: 0;
+}  
+.contact-page-form.contact-form input {
+  margin-bottom: 5px;
+}  
+.contact-page-form.contact-form textarea {
+  height: 110px;
+}
+.contact-page-form.contact-form input[type="submit"] {
+  background: #071c34;
+  width: 150px;
+  border-color: #071c34;
+}
+.contact-info-icon i {
+  font-size: 48px;
+  color: #fda40b;
+}
+.contact-info-text p{margin-bottom:0px;}
+.contact-info-text h2 {
+  color: #fff;
+  font-size: 22px;
+  text-transform: capitalize;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.contact-info-text span {
+  color: #999999;
+  font-size: 16px;
+  display: inline-block;
+  width: 100%;
+}
+
+.contact-page-form input {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #f9f9f9;
+  margin-bottom: 20px;
+  padding: 12px 16px;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.contact-page-form .message-input {
+display: inline-block;
+width: 100%;
+padding-left: 0;
+}
+.single-input-field textarea {
+  background: #f9f9f9 none repeat scroll 0 0;
+  border: 1px solid #f9f9f9;
+  width: 100%;
+  height: 120px;
+  padding: 12px 16px;
+  border-radius: 4px;
+}
+.single-input-fieldsbtn input[type="submit"] {
+  background: #fda40b none repeat scroll 0 0;
+  color: #fff;
+  display: inline-block;
+  font-weight: 600;
+  padding: 10px 0;
+  text-transform: capitalize;
+  width: 150px;
+  margin-top: 20px;
+  font-size: 16px;
+}
+.single-input-fieldsbtn input[type="submit"]:hover{background:#071c34;transition: all 0.4s ease-in-out 0s;border-color:#071c34}
+.single-input-field  h4 {
+  color: #464646;
+  text-transform: capitalize;
+  font-size: 14px;
+}
+.contact-page-form {
+  display: inline-block;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.contact-page-map {
+  margin-top: 36px;
+}
+.contact-page-form form {
+    padding: 20px 15px 0;
+}
+
+
+
+
+:root {
+  --scrollcolor: black;
+  --scrollbackground: white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+}
+
+
+
+.title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+  font-weight: 300;
+  color: #fff;
+  margin: 4rem auto 1rem;
+  width: 85%;
+  max-width: 1280px;
+}
+
+.slider {
+  width: 85%;
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.slider__content {
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  display: flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  scrollbar-color: var(--scrollcolor) var(--scrollbackground);
+}
+.slider__content::-webkit-scrollbar {
+  height: 0.5rem;
+  width: 0.5rem;
+  border-radius: 1rem;
+  background: var(--scrollbackground);
+}
+.slider__content::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background: var(--scrollcolor);
+}
+.slider__content::-webkit-scrollbar-track {
+  border-radius: 1rem;
+  background: var(--scrollbackground);
+}
+
+.slider__item {
+  scroll-snap-align: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  min-width: 100%;
+  width: 100%;
+  border-radius: 0.25rem;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 1;
+}
+@media (min-width: 460px) {
+  .slider__item {
+    aspect-ratio: 2/3;
+    min-width: calc(50% - 2rem);
+  }
+}
+@media (min-width: 940px) {
+  .slider__item {
+    min-width: calc(33.3333333333% - 4rem);
+  }
+}
+
+.slider__image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slider__info {
+  position: relative;
+  padding: 4rem 2rem 2rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75), rgba(32, 50, 57, 0));
+}
+.slider__info h2 {
+  color: #fff;
+  font-family: system-ui;
+  line-height: 1.1;
+  font-weight: 300;
+  font-size: 1.75rem;
+  margin: 0;
+}
+
+.slider__nav {
+  margin: 1rem 0 4rem;
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  align-content: center;
+  align-items: center;
+  pointer-events: none;
+}
+@media (min-width: 460px) {
+  .slider__nav {
+    justify-content: flex-end;
+  }
+}
+
+.slider__nav__button {
+  margin: 0;
+  appearance: none;
+  border: 0;
+  border-radius: 2rem;
+  background: #fff;
+  color: #203239;
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  line-height: 1;
+  pointer-events: none;
+  transition: 0.2s ease-out;
+  opacity: 0.25;
+}
+.slider__nav__button--active {
+  opacity: 1;
+  pointer-events: auto;
+  cursor: pointer;
+}
+#myUL {
+  /* Remove default list styling */
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#myUL li a {
+  border: 1px solid #ddd; /* Add a border to all links */
+  margin-top: -1px; /* Prevent double borders */
+  background-color: #f6f6f6; /* Grey background color */
+  padding: 12px; /* Add some padding */
+  text-decoration: none; /* Remove default text underline */
+  font-size: 18px; /* Increase the font-size */
+  color: black; /* Add a black text color */
+  display: block; /* Make it into a block element to fill the whole list */
+}
+
+#myUL li a:hover:not(.header) {
+  background-color: #eee; /* Add a hover effect to all links, except for headers */
+}
+</style>
+</head>
+<body id="page-top">
+  <!-- Navigation-->
+  <div class="container-fluid">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav" style="background-color: #cf5331;">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href=#>tastyhub.com</a>
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto my-2 my-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#content">Recipes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Meals</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Dinners</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#snacks">Snacks</a></li>
+
+                    <li class="nav-item"><a class="nav-link" href="coffee_guide.html">Our special coffee guide</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="sign_up.html">Sign in/ Sign up</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+  <!-- Masthead-->
+  <header class="masthead">
+      <div class="container px-4 px-lg-5 h-100" >
+          <div class="row gx-4 gx-lg-5 h-100 align-items-center justify-content-center text-center">
+              <div class="col-lg-8 align-self-end">
+                  <h1 class="text-white font-weight-bold">Tasty Hub</h1>
+                  <hr class="divider" />
+              </div>
+              <div class="col-lg-8 align-self-baseline">
+                  <h1 style="color: white;">Our recipes are <span class="txt-rotate" data-period="2000" data-rotate='[ "Healthy.", "Nutritious.", "Delicious.", "fun!" ]'></span>
+                  </h1> 
+                  <a class="btn btn-primary btn-xl" href="#seasonal">Explore More</a>
+                  </div>
+              <article class="wrapper">
+                <div class="marquee">
+                  <div class="marquee__group">
+                    <div class="recipe-hashtag">#ItalianCuisine</div>
+                    <div class="recipe-hashtag">#JapaneseSushi</div>
+                    <div class="recipe-hashtag">#IndianCuisine</div>  
+                    <div class="recipe-hashtag">#MexicanCuisine</div>  
+                    <div class="recipe-hashtag">#MexicanTacos</div>  
+
+
+
+
+                  
+                  </div>
+              
+                  <div aria-hidden="true" class="marquee__group">
+
+                    <div class="recipe-hashtag">#HyderbadiBiryani</div>  
+                    <div class="recipe-hashtag">#HealthySalads</div>  
+                    <div class="recipe-hashtag">#MediterraneanCuisine</div>  
+                    <div class="recipe-hashtag">#AsianCuisine</div>  
+                    <div class="recipe-hashtag">#BarbecueRecipes</div>  
+                   
+                  </div>
+                </div>
+              
+                <div class="marquee marquee--reverse">
+                  <div class="marquee__group">
+             
+                    <div class="recipe-hashtag">#FastFoods</div>  
+                    <div class="recipe-hashtag">#Desserts</div>  
+                    <div class="recipe-hashtag">#SeasonalRecipes</div>  
+                    <div class="recipe-hashtag">#Snacks</div>  
+                    <div class="recipe-hashtag">#Dinners</div>  
+         
+                  </div>
+              
+                  <div aria-hidden="true" class="marquee__group">
+         
+                    <div class="recipe-hashtag">#SpecialRecipes</div>  
+                    <div class="recipe-hashtag">#SpecialRecipes</div>  
+                    <div class="recipe-hashtag">#SpecialRecipes</div>  
+                    <div class="recipe-hashtag">#SpecialRecipes</div>  
+                    <div class="recipe-hashtag">#SpecialRecipes</div>  
+                  </div>
+                </div>
+              </article>
+          </div>
+          </div>
+      </div>
+  </header>
+
+
+<!-- Recipe Categories -->
+<!-- Recipe Categories -->
+<div class="w3-row-padding w3-padding-16" id="content">
+  <h2 class="w3-center" style="font-size: 64px;">Explore Our Recipe Collections</h2><br>
+  <main ng-app="myApp" ng-controller="myController">
+    <br />
+    <!--Search Bar-->
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12">
+          <input class="form-control" ng-model="search" type="text" id="myInput" onkeyup="myFunction()" placeholder="Search By Categories, Recipes.....">
+          <ul id="myUL" style="display: none;"> <!-- Initially hide the list -->
+            <li><a href="#">Elegant Desserts</a></li>
+            <li><a href="#">Healthy Salads</a></li>
+            <li><a href="#">Fast Foods</a></li>
+            <li><a href="#">Italian Cuisine</a></li>
+            <li><a href="#">Indian Cuisine</a></li>
+            <li><a href="#">Mexican Cuisine</a></li>
+            <li><a href="#">Mediterranean Cuisine</a></li>
+            <li><a href="#">Asian Cuisine</a></li>
+            <li><a href="#">Barbecue Recipes</a></li>
+            <li><a href="#">Macaroons</a></li>
+            <li><a href="#">Creme Brulee</a></li>
+            <li><a href="#">Tiramisu</a></li>
+            <li><a href="#">Baklava</a></li>
+            <li><a href="#">Mille-Feuille</a></li>
+            <li><a href="#">Sacher Torte</a></li>
+            <li><a href="#">Panna Cotta</a></li>
+            <li><a href="#">Chocolate Souffle</a></li>
+            <li><a href="#">Mango Sticky Rice</a></li>
+            <li><a href="#">Opera Cake</a></li>
+            <li><a href="#">Tres Leches Cake</a></li>
+            <li><a href="#">Fruit Tart</a></li>
+            <li><a href="#">Cannoli</a></li>
+            <li><a href="#">Lemon Meringue Pie</a></li>
+            <li><a href="#">Eclairs</a></li>
+            <li><a href="#">Greek Salad (Horiatiki)</a></li>
+            <li><a href="#">Caprese Salad</a></li>
+            <li><a href="#">Thai Green Papaya Salad (Som Tum)</a></li>
+            <li><a href="#">Caser Salad</a></li>
+            <li><a href="#">Tabbouleh</a></li>
+            <li><a href="#">Quinoa Salad</a></li>
+            <li><a href="#">Cobb Salad</a></li>
+            <li><a href="#">Waldore Salad</a></li>
+            <li><a href="#">Nicoise Salad</a></li>
+            <li><a href="#">Kinchi Salad</a></li>
+            <li><a href="#">Fattoush</a></li>
+            <li><a href="#">Panzanella</a></li>
+            <li><a href="#">Coleslaw</a></li>
+            <li><a href="#">Chinese Chicken Salad</a></li>
+            <li><a href="#">Beet And Goat Cheese Salad</a></li>
+            <li><a href="#">Burger and Fries</a></li>
+            <li><a href="#">Pizza </a></li>
+            <li><a href="#">Sushi</a></li>
+            <li><a href="#">Tacos</a></li>
+            <li><a href="#">Shawarma</a></li>
+            <li><a href="#">Snadwich</a></li>
+            <li><a href="#">Kebab</a></li>
+            <li><a href="#">Samosa</a></li>
+            <li><a href="#">Falafel</a></li>
+            <li><a href="#">HotDogs</a></li>
+            <li><a href="#">Noodles</a></li>
+            <li><a href="#">Pasta</a></li>
+            <li><a href="#">Spring Rolls</a></li>
+            <li><a href="#">Churro</a></li>
+            <li><a href="#">Pav Bhaji</a></li>
+            <li><a href="#">PaniPuri</a></li>
+            <li><a href="#">Pizza Margherita </a></li>
+            <li><a href="#">Pasta Carbonara</a></li>
+            <li><a href="#">Lasagna</a></li>
+            <li><a href="#">Risotto</a></li>
+            <li><a href="#">Ossobuco</a></li>
+            <li><a href="#">Bruschetta</a></li>
+            <li><a href="#">Ravioli</a></li>
+            <li><a href="#">Minestrone</a></li>
+            <li><a href="#">Carprese Salad</a></li>
+            <li><a href="#">Pesto Pasta</a></li>
+            <li><a href="#">Fettuccine Alfredo</a></li>
+            <li><a href="#">Cioppino</a></li>
+            <li><a href="#">Zuppa Toscana</a></li>
+            <li><a href="#">Torta Della Nonna</a></li>
+            <li><a href="#">Cacciatora</a></li>
+            <li><a href="#">Biryani</a></li>
+            <li><a href="#">Butter Chicken</a></li>
+            <li><a href="#">Panner Tikka</a></li>
+            <li><a href="#">Chole Bhature</a></li>
+            <li><a href="#">Tandoori Chicken</a></li>
+            <li><a href="#">Rogan Josh</a></li>
+            <li><a href="#">Palak Paneer</a></li>
+            <li><a href="#">Dhokla</a></li>
+            <li><a href="#">Masala Dosa</a></li>
+            <li><a href="#">Vindaloo</a></li>
+            <li><a href="#">Malai Kofta</a></li>
+            <li><a href="#">Aloo Paratha</a></li>
+            <li><a href="#">Hyderabadi Biryani</a></li>
+            <li><a href="#">Samosa</a></li>
+            <li><a href="#">Tikka Masala</a></li>
+            <li><a href="#">Macaroons</a></li>
+            <li><a href="#">Enchiladas</a></li>
+            <li><a href="#">Chiles Rellenos</a></li>
+            <li><a href="#">Tamales</a></li>
+            <li><a href="#">Salsa</a></li>
+            <li><a href="#">Ceviche</a></li>
+            <li><a href="#">Nachos</a></li>
+            <li><a href="#">Quesadilla</a></li>
+            <li><a href="#">Fajita</a></li>
+            <li><a href="#">Chiles En Nogada</a></li>
+            <li><a href="#">Pozole</a></li>
+            <li><a href="#">Huevos Rancheros</a></li>
+            <li><a href="#">Tlayuda</a></li>
+            <li><a href="#">Flautas</a></li>
+            <li><a href="#">Torta Ahogada</a></li>
+            <li><a href="#">Aztec Soup</a></li>
+            <li><a href="#">Hummus</a></li>
+            <li><a href="#">Falafel</a></li>
+            <li><a href="#">Tabbouleh</a></li>
+            <li><a href="#">Moussaka</a></li>
+            <li><a href="#">paella</a></li>
+            <li><a href="#">Gilled Sardines</a></li>
+            <li><a href="#">Laksa</a></li>
+            <li><a href="#">Nasi Goreng</a></li>
+            <li><a href="#">Szechuan Mapo Tofu</a></li>
+            <li><a href="#">Satay</a></li>
+            <li><a href="#">Dim Sum</a></li>
+            <li><a href="#">Kimchi</a></li>
+            <li><a href="#">American BBQ Ribs</a></li>
+            <li><a href="#">Argentinian Asado</a></li>
+            <li><a href="#">Brazilian Churrasco</a></li>
+            <li><a href="#">Turish Shish Kebab</a></li>
+            <li><a href="#">Australian Barbecue</a></li>
+
+
+
+          </ul>
+          
+        </div>
+      </div>
+    </div>
+    &nbsp;
+    <!-- Thumbnails -->
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4" ng-repeat="desserts in recipes | filter: desserts">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\desserts.html"><img src="desserts.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Elegant Desserts</h3>
+              <p style="padding: 10px;">If you have a sweet tooth and a flair for presentation, you will love the elegant desserts section.These desserts are not only delicious, but also beautiful to look at. Impress your guests or treat yourself with these elegant desserts.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\salads.html"><img src="healthysalads.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Healthy Salads</h3>
+              <p style="padding: 10px;">Discover nutritious, satisfying, and flavorful salads with grains, beans, fruits, nuts, cheese, and more in this section.Dress them up with homemade vinaigrettes or creamy sauces. Enjoy these salads as a side dish or a main course.</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\fastfoods.html"><img src="fastfoods.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Fast Foods</h3>
+              <p style="padding: 10px;">Sometimes you just need a quick and easy meal that doesn’t compromise on taste.These fast foods are simple to make, but still delicious and satisfying. You can also find tips on how to make them healthier and more balanced.</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Add more col elements for additional cards -->
+
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\italian.html"><img src="italian (2).jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Italian Cuisine</h3>
+              <p style="padding: 10px;">Italian cuisine is one of the most popular and beloved cuisines in the world. In the Italian cuisine section, you can explore the rich and diverse dishes of Italy.   <br><b>Buon appetito!</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\indian.html"><img src="indian.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Indian Cuisine</h3>
+              <p style="padding: 10px;"> Indian cuisine is a feast for the senses. In the Indian cuisine section, You can also learn about the different spices and herbs that give Indian cuisine its unique flavor and aroma.   <b>Namaste!</b> </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\mexican.html"><img src="mexican.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Mexican Cuisine</h3>
+              <p style="padding: 10px;"> Mexican cuisine is a fusion of indigenous, European, African, and Asian influences. In the Mexican cuisine section, you can enjoy the colorful and flavorful dishes of Mexico.   <b> ¡Buen provecho!</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            </a><a href="E:\Project_X (2.0)- Copy\sections\Mediterranean.html"><img src="meditteraean.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Mediterranean Cuisine</h3>
+              <p style="padding: 10px;">Mediterranean cuisine is based on the traditional foods and cooking methods of the countries bordering the Mediterranean Sea.You can also learn about the benefits of the Mediterranean diet and lifestyle.   <b>Bon appétit!</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\Asian.html"><img src="asian.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Asian Cuisine</h3>
+              <p style="padding: 10px;">Asian cuisine is a broad term that encompasses the diverse cuisines of Asia. In the Asian cuisine section, you can discover the amazing dishes of China, Japan, Korea, Thailand, Vietnam, India, and more.    <b>Enjoy!</b></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4" ng-repeat="x in recipes | filter: search">
+          <div class="thumbnail">
+            <a href="E:\Project_X (2.0)- Copy\sections\Barbecue.html"><img src="bbq.jpeg" alt="" width="370" height="270" style="border-radius: 8px; padding: 10px;"><a href="italian.html"></a>
+            <div class="caption"><br>
+              <h3 style="padding: 10px;">Barbecue Recipes</h3>
+              <p style="padding: 10px;">Barbecue is a method of cooking meat over fire or smoke. Whether you use a charcoal grill, a gas grill, or a smoker, you can create mouthwatering barbecue dishes with these recipes.   <b>Happy grilling!</b></p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  
+    
+
+
+
+<!-- seasonal recipes Container -->
+<div class="w3-container w3-padding-64  " id="seasonal" style="background-color: #f2f6f8;">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Welcome, Tomato Season</h1>
+    <div class="card-grid">
+      <a class="card" href="#" style="padding-left: 0%;">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/40/24/d1/4024d195551bd3cfaedd0a837c64009b.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Tomato Pasta</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/e8/40/b7/e840b7e05e8eb3ba13aec856a2aabd1c.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/85/fc/ba/85fcba36a4c316beb8779d7527003d9b.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </li>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/f3/5e/dd/f35eddfafbab10fad5e8a4df4a9fb452.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Tomato Sauce</h3>
+        </div>
+      </a>
+      <a class="card" href="#" style="padding-left: 0%;">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/40/24/d1/4024d195551bd3cfaedd0a837c64009b.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/e8/40/b7/e840b7e05e8eb3ba13aec856a2aabd1c.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/85/fc/ba/85fcba36a4c316beb8779d7527003d9b.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </li>
+      <a class="card" href="#">
+        <div class="card__background" style="background-image: url(https://i.pinimg.com/236x/f3/5e/dd/f35eddfafbab10fad5e8a4df4a9fb452.jpg)"></div>
+        <div class="card__content">
+          <p class="card__category">Seasonal Recipe</p>
+          <h3 class="card__heading">Example Card Heading</h3>
+        </div>
+      </a>
+    </div>
+  </div>
+  </div>
+
+
+<!-- other seasonal recipes Container -->
+
+  <div class="w3-container w3-padding-64 " id="snacks">
+    <div class="w3-content" id="Snacks">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">Quick Snacks, Across the world</h1>
+      <h1 class="title">Alpine slider</h1>
+      <div class="slider" x-data="{start: true, end: false}">
+        <div class="slider__content" x-ref="slider" x-on:scroll.debounce="$refs.slider.scrollLeft == 0 ? start = true : start = false; Math.abs(($refs.slider.scrollWidth - $refs.slider.offsetWidth) - $refs.slider.scrollLeft) < 5 ? end = true : end = false;">
+          <div class="slider__item">
+            <img class="slider__image" src="https://images.unsplash.com/photo-1588221319591-c6a2189ee29b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTV8fHBvdGF0byUyMGNoaXBzfGVufDB8fDB8fHww&auto=format&fit=crop&w=500&q=60" alt="Image">
+            <div class="slider__info">
+              <h2>Potato Chips (Crisps)</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://media.istockphoto.com/id/1213498159/photo/dark-chocolate-with-missing-bite.webp?b=1&s=170667a&w=0&k=20&c=18EuRQRM6x_osf-OOO7SRXy5gAoFwmZ21hU8pihl58A=" alt="Image">
+            <div class="slider__info">
+              <h2>Chocolate Bars</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://media.istockphoto.com/id/1347850132/photo/male-hand-picking-popcorn.webp?b=1&s=170667a&w=0&k=20&c=d1JM0hJsDUk2sBAfXSc9MxDNXvkp0FadvRwQ0QQ4nso=" alt="Image">
+            <div class="slider__info">
+              <h2>Popcorn</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://images.unsplash.com/photo-1583189774117-0d355da61fac?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8UHJldHplbHN8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Image">
+            <div class="slider__info">
+              <h2>Pretzels</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/f7/94/c4/f794c44e613ae64436150cfe8db71c53.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Nachos</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/f5/d4/c4/f5d4c4eaf3ae7f9a3de7a844b3f172e8.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Arepa</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/af/47/f4/af47f4e74a2718fb6b9207b4c56b5c25.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Empanadas</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/86/55/4a/86554a21490dc7500bc3bd9c96121cf1.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Gyoza</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/ad/ee/97/adee97c37a3fe8ac4fbb11e8c20c2126.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Tostadas</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/83/62/74/836274bef3d126a2ac05f3d388dc5f62.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Paneer Tikka</h2>
+            </div>
+          </div>
+          <div class="slider__item">
+            <img class="slider__image" src="https://i.pinimg.com/236x/e8/68/8a/e8688adc5ee909865305a74c1bd34dbe.jpg" alt="Image">
+            <div class="slider__info">
+              <h2>Hummus and Pita</h2>
+            </div>
+          </div>
+        </div>
+        <div class="slider__nav">
+          <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth * -1, behavior: 'smooth'});" x-bind:class="start ? '' : 'slider__nav__button--active'">Previous</button>
+          <button class="slider__nav__button" x-on:click="$refs.slider.scrollBy({left: $refs.slider.offsetWidth, behavior: 'smooth'});" x-bind:class="end ? '' : 'slider__nav__button--active'">Next</button>
+        </div>
+      </div>
+      </div>
+      </div>
+
+
+
+
+
+
+<div class="w3-container w3-padding-64 " id="seasonal" style="background-color: #f2f6f8;">
+  <div class="w3-content">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">dinners</h1>
+<div class="cards3">
+  <div class="card3" data-index="0">
+    <div class="card3__inner">
+      <div class="card3__image-container">
+        <img
+          class="card3__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt=""
+        />
+      </div>
+      <div class="card3__content">
+        <h1 class="card3__title">Card Title</h1>
+        <p class="card3__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card3" data-index="0">
+    <div class="card3__inner">
+      <div class="card3__image-container">
+        <img
+          class="card3__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt=""
+        />
+      </div>
+      <div class="card3__content">
+        <h1 class="card3__title">Card Title</h1>
+        <p class="card3__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card3" data-index="0">
+    <div class="card3__inner">
+      <div class="card3__image-container">
+        <img
+          class="card3__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt=""
+        />
+      </div>
+      <div class="card3__content">
+        <h1 class="card3__title">Card Title</h1>
+        <p class="card3__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="card3" data-index="0">
+    <div class="card3__inner">
+      <div class="card3__image-container">
+        <img
+          class="card3__image"
+          src="https://images.unsplash.com/photo-1620207418302-439b387441b0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=100"
+          alt=""
+        />
+      </div>
+      <div class="card3__content">
+        <h1 class="card3__title">Card Title</h1>
+        <p class="card3__description">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab dicta
+          error nam eaque. Eum fuga laborum quos expedita iste saepe
+          similique, unde possimus quia at magnam sed cupiditate?
+          Reprehenderit, harum!
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+</div></div>
+
+
+
+
+<div class="w3-container w3-padding-64" id="seasonal">
+    <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">our special recipes for you!</h1>
+    <div class="banner" id="home">
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-6">
+                  <div class="banner-caption">
+                      <h2 style="font-size:500%;">Food Made With Love</h2>
+                      <p style="font-size:250%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, magnam sapiente. Eos enim a quibusdam iusto sed excepturi pariatur, quisquam iure delectu natus laboriosam tempora quibusdam iusto sed alias itaque modi laborum hic!</p>
+                      <p style="font-size: 250%;"><a class="dft-btn" href="#">Fugu Sashimi (Japan) Veiw Now</a></p>
+                  </div>
+              </div>
+              <div class="col-lg-6">
+                  <div class="banner-png">
+                      <img src="C:\Users\tharu\OneDrive\Downloads\Convert to PNG project.png" alt="">
+                  </div>
+              </div>
+          </div>
+      </div>
+  </div>
+
+
+  <div class="banner" id="home">
+    <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="banner-png">
+                <img src="C:\Users\tharu\OneDrive\Downloads\Convert to PNG project (1).png" alt="">
+            </div>
+        </div>
+            <div class="col-lg-6">
+                <div class="banner-caption">
+                  <h2 style="font-size:500%;">Food Made With Love</h2>
+                  <p style="font-size:250%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, magnam sapiente. Eos enim a quibusdam iusto sed excepturi pariatur, quisquam iure delectu natus laboriosam tempora quibusdam iusto sed alias itaque modi laborum hic!</p>
+                  <p style="font-size: 250%;"><a class="dft-btn" href="#">Casu Marzu (Sardinia, Italy) Veiw Now</a></p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="banner" id="home">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-6">
+              <div class="banner-caption">
+                <h2 style="font-size:500%;">Food Made With Love</h2>
+                <p style="font-size:250%;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, magnam sapiente. Eos enim a quibusdam iusto sed excepturi pariatur, quisquam iure delectu natus laboriosam tempora quibusdam iusto sed alias itaque modi laborum hic!</p>
+                  <p style="font-size: 250%;"><a class="dft-btn" href="#">Chak-Hao Kheer (Manipur) Veiw Now</a></p>
+                </div>
+          </div>
+          <div class="col-lg-6">
+              <div class="banner-png">
+                  <img src="https://i.pinimg.com/236x/a4/5e/98/a45e98d810b452eb50b4900d4fd0eb0f.jpg" alt="">
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+  
+  
+
+
+
+
+
+</div>
+</div>
+</div>
+</div>
+<div>
+  <div class="w3-container w3-padding-64 w3-red w3-grayscale w3-xlarge" id="about">
+    <div class="w3-content">
+      <h1 class="w3-center w3-jumbo" style="margin-bottom:64px">About</h1>
+      <p>Welcome to Recipe Sharing Platform, your one-stop destination for culinary inspiration and gastronomic exploration! We are passionate about food and believe that the best way to celebrate the world's diverse cultures is through the art of cooking and sharing recipes.</p>
+      <p>Our journey began with a simple idea: to create a virtual space where home cooks, food enthusiasts, and professional chefs could unite, exchange ideas, and showcase their mouthwatering creations.</p>
+      <p>Our mission is to inspire and empower a global community of food lovers to unleash their creativity in the kitchen. We strive to create a platform where every unique recipe finds its voice, and every cooking journey is celebrated. From elegant desserts to healthy salads, from mouthwatering starters to delightful fast foods, our diverse collection of recipes reflects the rich tapestry of culinary delights from all corners of the globe.</p>
+      <p>Whether you're looking for an exquisite dessert to sweeten your day or a refreshing salad to tantalize your taste buds, Recipe Sharing Platform has something to satiate every craving. So, roll up your sleeves, tie on your apron, and let's create culinary magic together!</p>
+      <p>At Recipe Sharing Platform, food knows no boundaries, and the joy of cooking knows no limits. Come, share your recipes, explore new flavors, and celebrate the true essence of food - a universal language that unites us all. Let's savor every moment, one recipe at a time!</p>
+      <p><strong>Join our culinary adventure and be a part of this delightful journey!</strong></p>
+      </div>
+      </div>
+  
+</div>
+<!-- Contact -->
+<section class="contact-page-sec">
+  <div class="container" id="contact">
+    <div class="row">
+      <div class="col-md-4">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-map-marked"></i>
+            </div>
+            <div class="contact-info-text">
+              <h2>address</h2>
+              <span>1215 Lorem Ipsum, Ch 176080 </span> 
+              <span>Chandigarh , INDIA</span> 
+            </div>
+          </div>            
+        </div>          
+      </div>          
+      <div class="col-md-4">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <div class="contact-info-text">
+              <h2>E-mail</h2>
+              <span>info@LoremIpsum.com</span> 
+              <span>yourmail@gmail.com</span>
+            </div>
+          </div>            
+        </div>                
+      </div>                
+      <div class="col-md-4">
+        <div class="contact-info">
+          <div class="contact-info-item">
+            <div class="contact-info-icon">
+              <i class="fas fa-clock"></i>
+            </div>
+            <div class="contact-info-text">
+              <h2>office time</h2>
+              <span>Mon - Thu  9:00 am - 4.00 pm</span>
+              <span>Thu - Mon  10.00 pm - 5.00 pm</span>
+            </div>
+          </div>            
+        </div>          
+      </div>          
+    </div>
+    <div class="row">
+      <div class="col-md-8">
+        <div class="contact-page-form" method="post">
+          <h2>Get in Touch</h2> 
+          <form action="contact-mail.php" method="post">
+            <div class="row">
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="single-input-field">
+                <input type="text" placeholder="Your Name" name="name"/>
+              </div>
+            </div>  
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="single-input-field">
+                <input type="email" placeholder="E-mail" name="email" required/>
+              </div>
+            </div>                              
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="single-input-field">
+                <input type="text" placeholder="Phone Number" name="phone"/>
+              </div>
+            </div>  
+            <div class="col-md-6 col-sm-6 col-xs-12">
+              <div class="single-input-field">
+                <input type="text" placeholder="Subject" name="subject"/>
+              </div>
+            </div>                
+            <div class="col-md-12 message-input">
+              <div class="single-input-field">
+                <textarea  placeholder="Write Your Message" name="message"></textarea>
+              </div>
+            </div>                                                
+            <div class="single-input-fieldsbtn">
+              <input type="submit" value="Send Now"/>
+            </div>                          
+          </div>
+          </form>   
+        </div>      
+      </div>
+      <div class="col-md-4">        
+        <div class="contact-page-map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d109741.02912911311!2d76.69348873658222!3d30.73506264436677!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390fed0be66ec96b%3A0xa5ff67f9527319fe!2sChandigarh!5e0!3m2!1sen!2sin!4v1553497921355" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+        </div>          
+      </div>        
+    </div>
+  </div>
+</section>
+
+<!-- footer -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-column">
+        <h4 class="footer-title">Product</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">Dinners</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Cuisines</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Meals</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Kitchen Tips</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-title">Company</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link" href="#">About us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Job postings</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">News and articles</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer-column">
+        <h4 class="footer-title">Contact & Support</h4>
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <span class="nav-link"><i class="fas fa-phone"></i>+47 45 80 80 80</span>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-comments"></i>Live chat</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="creators.html"><i class="fas fa-envelope"></i>Contact us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#"><i class="fas fa-star"></i>Give feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="social-media">
+      <a href="https://twitter.com/tharun_gadupudi" target="_blank" rel="noopener noreferrer"><img src="https://i.pinimg.com/236x/60/fa/2b/60fa2b2181c40ac12302e6fdbc418512.jpg" alt="Twitter"></a>
+      <a href="https://www.linkedin.com/in/tharun-gadupudi-b71721264/" target="_blank" rel="noopener noreferrer"><img src="https://i.pinimg.com/236x/46/dd/91/46dd9133547bbaab4209fb5d0d06ae98.jpg" alt="Youtube"></a>
+      <a href="https://www.facebook.com/tharun-sai-gadupudi" target="_blank" rel="noopener noreferrer"><img src="https://i.pinimg.com/236x/fd/93/f0/fd93f02de56410cf1a1a233e9d2f711e.jpg" alt="Facebook"></a>
+      <a href="https://www.instagram.com/tharun-sai-gadupudi" target="_blank" rel="noopener noreferrer"><img src="https://i.pinimg.com/236x/21/d6/7f/21d67f1d6b3be5bb2e39395311c77fc6.jpg" alt="Instagram"></a>
+      <a href="https://www.github.com/tharun-sai-gadupudi" target="_blank" rel="noopener noreferrer"><img src="https://i.pinimg.com/236x/b5/1b/78/b51b78ecc9e5711274931774e433b5e6.jpg" alt="Github"></a>
+
+    </div>
+    <div class="text-center">
+      <i class="fas fa-ellipsis-h"></i>
+    </div>
+    
+    <div class="row text-center">
+      <div class="col-md-4 box">
+        <p class="footer-text">Copyright &copy; Tasty Hub <script>document.write(new Date().getFullYear())</script></p>
+      </div>
+      <div class="col-md-4 box">
+        <ul class="list-inline social-buttons">
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4 box">
+        <ul class="list-inline quick-links">
+          <li class="list-inline-item">
+            <a href="#">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div></div>
+  </div>
+</footer>
+
+<script>
+  
+  var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 2000;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 1);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 1);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+
+
+
+
+function myFunction() {
+  // Declare variables
+  var input, filter, ul, li, a, i, txtValue;
+  input = document.getElementById('myInput');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("myUL");
+  li = ul.getElementsByTagName('li');
+
+  // Show the list initially when the input is focused
+  if (filter !== '') {
+    ul.style.display = "block";
+  } else {
+    ul.style.display = "none";
+  }
+
+  // Loop through all list items, and hide those who don't match the search query
+  for (i = 0; i < li.length; i++) {
+    a = li[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      li[i].style.display = "";
+    } else {
+      li[i].style.display = "none";
+    }
+  }
+}
+
+
+
+
+
+
+
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};
+// Tabbed Menu
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-red";
+}
+document.getElementById("myLink").click();
+// Function to show the selected category's recipe cards
+function showCategory(category) {
+  // Hide all recipe categories
+  var recipeCategories = document.getElementsByClassName("recipe-category");
+  for (var i = 0; i < recipeCategories.length; i++) {
+    recipeCategories[i].style.display = "none";
+  }
+
+  // Show the selected category's recipe cards
+  var selectedCategory = document.getElementById(category);
+  if (selectedCategory) {
+    selectedCategory.style.display = "block";
+  }
+}
+// Function to show the selected category's recipe cards
+function showRecipes(category) {
+  // You can implement this function to take the user to the respective recipe section based on the category.
+  // For example, you can redirect the user to "desserts.html" for Elegant Desserts category,
+  // "salads.html" for Healthy Salads category, and so on.
+
+  // Replace the below line with the appropriate redirection logic based on the category.
+  // window.location.href = "path_to_the_recipe_section_for_category";
+  console.log("You clicked on the " + category + " category. Implement the redirection logic here.");
+}
+
+// Function to view the recipes for the selected category
+function viewRecipes(category) {
+  // You can implement this function to take the user to the respective recipe section for the selected category.
+  // For example, you can redirect the user to "desserts_recipes.html" for Elegant Desserts category,
+  // "salads_recipes.html" for Healthy Salads category, and so on.
+
+  // Replace the below line with the appropriate redirection logic based on the category.
+  // window.location.href = "path_to_the_recipe_section_for_selected_category";
+  console.log("Viewing recipes for the " + category + " category. Implement the redirection logic here.");
+}
+
+
+
+
+window.addEventListener('DOMContentLoaded', event => {
+
+// Navbar shrink function
+var navbarShrink = function () {
+    const navbarCollapsible = document.body.querySelector('#mainNav');
+    if (!navbarCollapsible) {
+        return;
+    }
+    if (window.scrollY === 0) {
+        navbarCollapsible.classList.remove('navbar-shrink')
+    } else {
+        navbarCollapsible.classList.add('navbar-shrink')
+    }
+
+};
+
+
+// Shrink the navbar 
+navbarShrink();
+
+// Shrink the navbar when page is scrolled
+document.addEventListener('scroll', navbarShrink);
+
+// Activate Bootstrap scrollspy on the main nav element
+const mainNav = document.body.querySelector('#mainNav');
+if (mainNav) {
+    new bootstrap.ScrollSpy(document.body, {
+        target: '#mainNav',
+        rootMargin: '0px 0px -40%',
+    });
+};
+
+// Collapse responsive navbar when toggler is visible
+const navbarToggler = document.body.querySelector('.navbar-toggler');
+const responsiveNavItems = [].slice.call(
+    document.querySelectorAll('#navbarResponsive .nav-link')
+);
+responsiveNavItems.map(function (responsiveNavItem) {
+    responsiveNavItem.addEventListener('click', () => {
+        if (window.getComputedStyle(navbarToggler).display !== 'none') {
+            navbarToggler.click();
+        }
+    });
+});
+
+// Activate SimpleLightbox plugin for portfolio items
+new SimpleLightbox({
+    elements: '#portfolio a.portfolio-box'
+});
+
+});
+
+
+var app = angular.module("myApp",[]);
+app.controller("myController", function($scope){
+
+	$scope.recipes = [
+	{
+		recipe: "Elegant Desserts",
+		image: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/JM65V3JK8X.jpg",
+		description: "Chicken cooked lightly to crip. Side of pickle"
+
+	},
+	{
+		recipe: "Turkey",
+		image: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/D7F9292D60.jpg",
+		description: "Turkey cooked lightly to crip. Side of pickle"
+
+	},
+	{
+		recipe: "Sandwich",
+		image: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/T4EK2NTHY2.jpg",
+		description: "Turkey cooked lightly to crip. Side of pickle"
+	},
+	{
+		recipe: "Appetizer",
+		image: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/1FFE9122BE.jpg",
+		description: "Chicken cooked lightly to crip. Side of pickle"
+
+	},
+	{
+		recipe: "Burger",
+		image: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/JSFGN9B9CV.jpg",
+		description: "Turkey cooked lightly to crip. Side of pickle"
+
+	},
+	{
+		recipe: "Salmon",
+		image: "https://d2lm6fxwu08ot6.cloudfront.net/img-thumbs/960w/S4LJZONO2I.jpg",
+		description: "Turkey cooked lightly to crip. Side of pickle"
+	}
+  ];
+
+});
+
+
+</script>
+</body>
+</html>

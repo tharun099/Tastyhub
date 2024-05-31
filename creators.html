@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <style>
+    /* Your existing styles */
+    /* ... (existing styles) ... */
+ /* Your existing styles */
+    body {
+    position: relative;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    color: #afaeae;
+    font: 300 14px Lato,sans-serif;
+    letter-spacing: .5px;
+    padding-top: 50px;
+   background: #212121;
+}
+h1,h2,h3,h4 {
+    margin: 0 0 10px;
+    color: #1e1e1e;
+    text-transform: uppercase
+}
+
+h2,h3 {
+    font-weight: 900;
+    text-transform: none
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 64px;
+    letter-spacing: 4px
+}
+
+h2 {
+    font-size: 32px;
+    letter-spacing: 2px;
+    text-align: left
+}
+
+h2::before {
+    position: absolute;
+    top: 13px;
+    left: 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    background: #dcdcdc;
+    width: 8px;
+    height: 8px
+}
+
+h3 {
+    font-size: 16px;
+    letter-spacing: 1px
+}
+
+li {
+    list-style-type: none;
+}
+.nopadding{
+   padding: 0;
+}
+.about-image img{
+   height: 320px;
+}
+.about-info ul li {
+    padding: 14px 0;
+    border-bottom: 1px dashed #414141;
+}
+.about-info ul li h4 {
+    display: inline-block;
+    margin-bottom: 5px;
+    padding-right: 5px;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.5px;
+   color: #EF971D;
+}
+about-info{
+   color: #fff;
+}
+.about-content div {
+    background: #2e2e2e;
+    position: relative;
+    height: 100%;
+    padding: 30px
+}
+
+.about-content h3 {
+    font-size: 42px;
+    letter-spacing: 1.5px
+}
+
+.about-content span {
+    display: block;
+    margin-bottom: 10px;
+    color: #EF971D;
+    font-weight: 300;
+    font-size: 18px;
+    letter-spacing: 1px
+}
+.about-content p{
+   line-height: 24px;
+}
+.about-content ul{
+   margin: 0;
+   padding: 0;
+}
+.about-content ul li {
+    display: inline-block;
+    margin-right: 8px;
+    text-align: center;
+    margin-top: 20px
+}
+
+.about-content ul li:last-child {
+    margin: 0
+}
+
+.about-content ul li a {
+    display: block;
+    width: 42px;
+    height: 42px;
+    color: #a0a0a0;
+    font-size: 13px;
+    line-height: 38px
+}
+
+.about-content ul li a{
+    background: #1e1e1e;
+    border-color: #1e1e1e;
+    color: #fff
+}
+
+    /* New CSS for side-by-side layout */
+    .about-us {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+
+
+    @media (max-width: 768px) {
+      .about-us {
+        flex-direction: column;
+      }
+
+      .about-info,
+      .about-content {
+        width: 100%;
+      }
+    }
+
+    /* New CSS for side-by-side layout */
+    .about-us {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start; /* Align items at the top */
+      flex-wrap: wrap; /* Allow items to wrap to new lines */
+    }
+
+    .about-info {
+      flex: 1;
+    }
+
+    .about-content {
+      flex: 1;
+      margin-left: 20px; /* Add some spacing between the sections */
+    }
+
+    /* ... (media queries for responsiveness) ... */
+  </style>
+  <title>Your Website</title>
+</head>
+<body>
+  <section class="about-us">
+    <div class="col-xs-12 col-md-6 about-info">
+      <ul>
+        <li><h4>ADDRESS:</h4><span>121 King St, Melbourne VIC 3000, Australia</span></li>
+        <!-- Other contact information here -->
+               <li><h4>Date of birth:</h4><span>31/12/1990</span></li>
+               <li><h4>Email:</h4><span>john.l@domain.com</span></li>
+               <li><h4>Phone:</h4><span>+(987) 654 321 01</span></li>
+               <li><h4>Skype:</h4><span>john.luna</span></li>
+               <li><h4>Languages:</h4><span>English, Spanish</span></li>
+      </ul>
+    </div><!-- .About-info ends here -->
+
+    <div class="col-xs-12 col-md-6 about-content">
+      <div>
+        <h3>RvDesignStudio</h3>
+        <span>Photographer / Web Developer</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget nunc convallis, lacinia tellus eu, tempor libero. Curabitur convallis lacinia diam ac efficitur. Mauris libero nibh, dictum dignissim consequat a, eleifend vitae eros. Sed vitae mauris risus.
+        </p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+      </div>
+    </div><!-- .About-content ends here -->
+  </section><!-- .Section ends here -->
+<br>
+  <!-- Repeat the above structure for additional sections if needed -->
+  <section class="about-us">
+    <div class="col-xs-12 col-md-6 about-info">
+      <ul>
+        <li><h4>ADDRESS:</h4><span>121 King St, Melbourne VIC 3000, Australia</span></li>
+        <!-- Other contact information here -->
+               <li><h4>Date of birth:</h4><span>31/12/1990</span></li>
+               <li><h4>Email:</h4><span>john.l@domain.com</span></li>
+               <li><h4>Phone:</h4><span>+(987) 654 321 01</span></li>
+               <li><h4>Skype:</h4><span>john.luna</span></li>
+               <li><h4>Languages:</h4><span>English, Spanish</span></li>
+      </ul>
+    </div><!-- .About-info ends here -->
+
+    <div class="col-xs-12 col-md-6 about-content">
+      <div>
+        <h3>RvDesignStudio</h3>
+        <span>Photographer / Web Developer</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget nunc convallis, lacinia tellus eu, tempor libero. Curabitur convallis lacinia diam ac efficitur. Mauris libero nibh, dictum dignissim consequat a, eleifend vitae eros. Sed vitae mauris risus.
+        </p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+      </div>
+    </div><!-- .About-content ends here -->
+  </section><!-- .Section ends here -->
+<br>
+  <section class="about-us">
+    <div class="col-xs-12 col-md-6 about-info">
+      <ul>
+        <li><h4>ADDRESS:</h4><span>121 King St, Melbourne VIC 3000, Australia</span></li>
+        <!-- Other contact information here -->
+               <li><h4>Date of birth:</h4><span>31/12/1990</span></li>
+               <li><h4>Email:</h4><span>john.l@domain.com</span></li>
+               <li><h4>Phone:</h4><span>+(987) 654 321 01</span></li>
+               <li><h4>Skype:</h4><span>john.luna</span></li>
+               <li><h4>Languages:</h4><span>English, Spanish</span></li>
+      </ul>
+    </div><!-- .About-info ends here -->
+
+    <div class="col-xs-12 col-md-6 about-content">
+      <div>
+        <h3>RvDesignStudio</h3>
+        <span>Photographer / Web Developer</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget nunc convallis, lacinia tellus eu, tempor libero. Curabitur convallis lacinia diam ac efficitur. Mauris libero nibh, dictum dignissim consequat a, eleifend vitae eros. Sed vitae mauris risus.
+        </p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+      </div>
+    </div><!-- .About-content ends here -->
+  </section><!-- .Section ends here -->
+<br>
+  <section class="about-us">
+    <div class="col-xs-12 col-md-6 about-info">
+      <ul>
+        <li><h4>ADDRESS:</h4><span>121 King St, Melbourne VIC 3000, Australia</span></li>
+        <!-- Other contact information here -->
+               <li><h4>Date of birth:</h4><span>31/12/1990</span></li>
+               <li><h4>Email:</h4><span>john.l@domain.com</span></li>
+               <li><h4>Phone:</h4><span>+(987) 654 321 01</span></li>
+               <li><h4>Skype:</h4><span>john.luna</span></li>
+               <li><h4>Languages:</h4><span>English, Spanish</span></li>
+      </ul>
+    </div><!-- .About-info ends here -->
+
+    <div class="col-xs-12 col-md-6 about-content">
+      <div>
+        <h3>RvDesignStudio</h3>
+        <span>Photographer / Web Developer</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget nunc convallis, lacinia tellus eu, tempor libero. Curabitur convallis lacinia diam ac efficitur. Mauris libero nibh, dictum dignissim consequat a, eleifend vitae eros. Sed vitae mauris risus.
+        </p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+      </div>
+    </div><!-- .About-content ends here -->
+  </section><!-- .Section ends here -->
+<br>
+  <section class="about-us">
+    <div class="col-xs-12 col-md-6 about-info">
+      <ul>
+        <li><h4>ADDRESS:</h4><span>121 King St, Melbourne VIC 3000, Australia</span></li>
+        <!-- Other contact information here -->
+               <li><h4>Date of birth:</h4><span>31/12/1990</span></li>
+               <li><h4>Email:</h4><span>john.l@domain.com</span></li>
+               <li><h4>Phone:</h4><span>+(987) 654 321 01</span></li>
+               <li><h4>Skype:</h4><span>john.luna</span></li>
+               <li><h4>Languages:</h4><span>English, Spanish</span></li>
+      </ul>
+    </div><!-- .About-info ends here -->
+
+    <div class="col-xs-12 col-md-6 about-content">
+      <div>
+        <h3>RvDesignStudio</h3>
+        <span>Photographer / Web Developer</span>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eget nunc convallis, lacinia tellus eu, tempor libero. Curabitur convallis lacinia diam ac efficitur. Mauris libero nibh, dictum dignissim consequat a, eleifend vitae eros. Sed vitae mauris risus.
+        </p>
+        <ul>
+          <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+          <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+          <li><a href="#"><i class="fa fa-behance"></i></a></li>
+        </ul>
+      </div>
+    </div><!-- .About-content ends here -->
+  </section><!-- .Section ends here -->
+
+</body>
+</html>

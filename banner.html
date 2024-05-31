@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Food Exam</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <!-- Google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"> 
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Extarnal CSS -->
+  </head>
+  <body>
+
+    <!-- banner section -->
+    <div class="banner" id="home">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="banner-caption">
+                        <h2>Food Made With Love</h2>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum, magnam sapiente. Eos enim a quibusdam iusto sed excepturi pariatur, quisquam iure delectu natus laboriosam tempora quibusdam iusto sed alias itaque modi laborum hic!</p>
+                        <a class="dft-btn" href="#">Veiw Now</a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="banner-png">
+                        <img src="https://i.ibb.co/rx0BxnF/home-img.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<style>
+*{
+    font-family: 'Nunito', sans-serif ;
+    text-transform: capitalize;
+}
+body{
+    background-color: #f7f7f7;
+}
+h2::selection{
+    background-color: #ff3838 !important;
+    color: #fff;
+}
+h3::selection{
+    background-color: #ff3838 !important;
+    color: #fff;
+}
+p::selection{
+    background-color: #ff3838 !important;
+    color: #fff;
+}
+span::selection{
+    background-color: #ff3838 !important;
+    color: #fff;
+}
+a::selection{
+    background-color: #ff3838 !important;
+    color: #fff;
+}
+i::selection{
+    background-color: #ff3838 !important;
+    color: #fff;
+}
+
+.dft-btn {
+    color: #ff3838 !important;
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 25px;
+    border-radius: 5px;
+    font-weight: 600;
+    position: relative;
+    transition: all .5s;
+    z-index: 1;
+    border: 2px solid #ff3838 !important;
+}
+
+.dft-btn::before {
+    content: "";
+    height: 100%;
+    width: 0;
+    background-color: #ff3838;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transition: all .4s linear;
+    z-index: -1;
+}
+.dft-btn:hover::before{
+    width: 100%;
+    left: 0;
+}
+.dft-btn:hover{
+    color: #fff !important;
+}
+
+.top-caption{
+    text-align: center;
+}
+.top-caption h2 {
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 12px;
+}
+.top-caption span {
+    color: #ff3838;
+}
+
+
+.p-fact {
+    padding: 0;
+    padding: 0 8px !important;
+}
+
+/* *****  header  **** */
+header {
+    background: #fff;
+    box-shadow: 0px 0px 20px rgba(153, 153, 153, 0.63);
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+header .h-logo {
+    color: #6e6e6e !important;
+    font-weight: 700;
+    font-size: 25px;
+}
+header .h-logo-icon {
+    color: #ff3838 !important;
+    margin-right: 5px;
+}
+
+header ul li {
+    margin-left: 25px;
+}
+header ul li a {
+    color: #6e6e6e !important;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+header ul li a:hover {
+    color: #ff3838 !important;
+}
+
+
+/******* banner *******/
+.banner {
+    margin-top: 74px;
+    padding: 50px 0 100px 0;
+    background-image: url(https://i.ibb.co/VQg32fJ/home-bg.jpg);
+    background-position: bottom center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.banner-caption h2 {
+    font-size: 47px;
+    font-weight: 700;
+    color: #333;
+    margin-top: 170px;
+    padding-bottom: 5px;
+}
+.banner-caption p {
+    color: #666;
+    font-weight: 600;
+    padding-right: 10px;
+}
+
+.banner-png {
+    padding-left: 40px;
+}
+.banner-png img {
+    width: 100%;
+}
+.banner-png img {
+    animation: bounce 1s infinite alternate;
+    -webkit-animation: bounce 1s infinite alternate;
+}
+@keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+}
+@-webkit-keyframes bounce {
+    from {
+      transform: translateY(0px);
+    }
+    to {
+      transform: translateY(-15px);
+    }
+}
+
+
+/* ******speciality******* */
+.speciality{
+    padding: 40px 0;
+}
+
+.sp-hvr-box {
+    overflow: hidden;
+    border: 2px solid #8887;
+    border-radius: 4px;
+    background: #fff;
+    box-shadow: 0px 0px 7px #9997;
+}
+.box-png {
+    height: 290px;
+}
+.box-png img {
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    left: -70px;
+}
+
+.box-title {
+    height: 290px;
+}
+.box-title img {
+    width: 15%;
+    margin-top: 35px;
+}
+.box-title h3 {
+    margin-top: 20px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #333;
+}
+.box-title p {
+    color: #777;
+    padding: 5px 30px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+
+/* sp-2 */
+.sp-2 .sp-hvr-box {
+    height: 220px;
+}
+
+.sp-2 .box-png {
+    height: 220px;
+    overflow: hidden;
+}
+
+.sp-2 .box-png img {
+    width: 100%;
+    height: auto;
+    left: 0;
+}
+
+.sp-2 .box-title {
+    height: 220px;
+}
+
+.sp-2 .box-title img {
+    width: 8%;
+}
+
+/* hov */
+.sp-hvr-box{
+    position: relative;
+    height: 290px;
+}
+.sp-hov-content {
+    position: relative;
+    top: -102%;
+    left: 0;
+    transition: all .6s;
+    cursor: pointer;
+}
+.sp-hvr-box:hover .sp-hov-content{
+    top: 0;
+}
+
+
+/* ******popular-foods****** */
+.popular-foods{
+    padding: 20px 0;
+}
+
+.pf-box {
+    overflow: hidden;
+    border: 2px solid #8887;
+    border-radius: 5px;
+    background: #fff;
+    box-shadow: 0px 0px 7px #9997;
+    padding-bottom: 20px;
+}
+.pf-box h3 {
+    font-size: 25px;
+    font-weight: 700;
+}
+.pf-box p {
+    color: #ffd700;
+}
+
+.pf-png {
+    width: 87%;
+    overflow: hidden;
+    margin: 20px auto;
+    border-radius: 5px;
+    position: relative;
+}
+.pf-png img {
+    width: 140%;
+    position: relative;
+    left: -52px;
+}
+.pf-png p {
+    position: absolute;
+    background: #ff3838;
+    color: #fff;
+    top: 10px;
+    left: 10px;
+    font-size: 18px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+/* pf-2 */
+.pf-2 .pf-png {
+    width: 94%;
+    height: 240px;
+    overflow: hidden;
+}
+.pf-2 .pf-png img {
+    width: 100%;
+    left: 0;
+    bottom: 50px;
+}
+
+/* ******how-work****** */
+.how-work{
+    padding: 20px 0 50px 0;
+}
+
+.work-box img {
+    border-radius: 50%;
+    border: 10px solid #fff;
+    box-shadow: 0px 0px 8px #8885;
+    margin: 25px auto;
+}
+.work-box p {
+    font-size: 30px;
+    font-weight: 700;
+    color: #444;
+}
+.fixed {
+    width: 1485px;
+    margin: 0 auto;
+}
+
+/* ********food gallery section ********* */
+.food-gallery{
+    padding-bottom: 50px;
+}
+
+.fg-box {
+    overflow: hidden;
+    border: 10px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px #8886;
+    position: relative;
+    transition: all .5s;
+    cursor: pointer;
+}
+.fg-box img {
+    width: 115%;
+    position: relative;
+    left: -25px;
+}
+
+.fg-overlay {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #f7f7f7e8;
+}
+.fg-overlay h3 {
+    font-weight: 700;
+    color: #444;
+    margin-top: 40px;
+}
+.fg-overlay p {
+    color: #777;
+    font-weight: 600;
+    padding: 0 15px;
+    font-size: 15px;
+}
+/* hov */
+.fg-overlay {
+    opacity: 0;
+    visibility: hidden;
+    transition: all .5s;
+}
+.fg-box:hover .fg-overlay{
+    top: 0;
+    opacity: 1;
+    visibility: visible;
+}
+/* fg-2 */
+.fg-2 .fg-box {
+    height: 240px;
+}
+.fg-2 .fg-box img {
+    width: 100%;
+    left: 0;
+    top: -530px;
+}
+.fg-2 .fg-overlay h3{
+    margin-top: 60px;
+}
+
+
+/* ******review****** */
+.review{
+    padding-bottom: 50px;
+}
+.cr-face img {
+    width: 30%;
+    border: 11px solid #fff;
+    border-radius: 50%;
+    position: relative;
+    top: 63px;
+    box-shadow: 0px 0px 8px #6668;
+}
+
+.cr-title {
+    background: #333;
+    color: #fff;
+    border: 11px solid #fff;
+    border-radius: 5px;
+    box-shadow: 0px 0px 8px #6668;
+    padding-top: 70px;
+}
+.cr-title h3 {
+    font-size: 26px;
+    font-weight: 700;
+}
+.cr-title span {
+    color: #ff3838;
+}
+.cr-title p {
+    color: #f5f5f1;
+    font-size: 14px;
+    padding: 10px 20px;
+}
+
+
+/* ******order****** */
+.order {
+    padding-bottom: 20px;
+}
+
+.order-bg {
+    background: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    box-shadow: 0px 0px 15px #7777;
+}
+
+.order-image img {
+    width: 90%;
+}
+
+.order-form a {
+    color: #ff3838 !important;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-block;
+    border: 2px solid #ff3838;
+    border-radius: 4px;
+    padding: 5px 25px;
+    transition: all .5s;
+}
+.order-form a:hover{
+    background-color: #ff3838 !important;
+    color: #fff !important;
+    border: 2px solid transparent;
+    box-shadow: 0px 0px 8px #ff383886;
+}
+
+/* *****footer**** */
+footer {
+    background: #111;
+    padding: 30px 0;
+}
+footer a {
+    margin: 0 7px;
+}
+footer p {
+    color: #fafafa;
+    margin-top: 20px;
+    font-size: 18px;
+}
+footer span {
+    color: #ff3838;
+    font-weight: 700;
+}
+</style>

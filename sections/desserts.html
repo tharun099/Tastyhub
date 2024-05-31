@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Elegant Desserts</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    .recipe-card {
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("https://images.unsplash.com/photo-1533910534207-90f31029a78e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGRlc3NlcnQlMjBmb29kJTIwYmFja2dyb3VuZHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Elegant Desserts</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="process_macaroons(dessert).html"><img src="https://i.pinimg.com/564x/65/0c/ac/650cac80726bfc2b2a725f63689c792b.jpg" alt="Dessert 1"></a>
+    <a href="process_macaroons(dessert).html"><h2>Macaroons</h2></a>
+    <p>A macaroon is a sweet and delicate confection that originates from France. It is known for its smooth, crisp outer shell and a soft, chewy interior.</p>
+  </div>
+
+  <div class="recipe-card">
+    <a href="recipie2.html"><img src="E:\OSWT\Creme-brulee-1-1200x814.png" alt="Dessert 2"></a>
+    <a href="recipie2.html"><h2>Creme Brulee</h2></a>
+    <p>Crème brûlée is a classic French dessert known for its rich and velvety custard base topped with a layer of caramelized sugar.</p>
+  </div>
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie3.html"><img src="E:\OSWT\05COOKING-TIRAMISU1-master768.png" alt="Dessert 3"></a>
+    <a href="recipie3.html"><h2>Tiramisu</h2></a>
+    <p>Tiramisu is a beloved Italian dessert that's known for its layers of rich and creamy flavors. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie4.html"><img src="E:\OSWT\Baklava(1).png" alt="Dessert 4"></a>
+    <a href="recipie4.html"><h2>Baklava</h2></a>
+    <p>Baklava is a sweet and indulgent pastry that is popular in many Middle Eastern and Mediterranean cuisines.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie5.html"><img src="E:\OSWT\mille-feuille.png" alt="Dessert 5"></a>
+    <a href="recipie5.html"><h2>Mille-Feuille </h2></a>
+    <p>Mille-Feuille, also known as Napoleon or custard slice, is a classic French pastry that's characterized by its delicate layers of puff pastry and creamy fillings.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie6.html"><img src="E:\OSWT\sacher-torte (1).png" alt="Dessert 6"></a>
+    <a href="recipie6.html"><h2>Sacher Torte </h2></a>
+    <p>The Sachertorte is a famous Austrian dessert that's renowned for its decadent combination of rich chocolate cake and apricot jam, all coated with a glossy layer of chocolate glaze. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie7.html"><img src="https://cdn1.jernejkitchen.com/sites/default/files/panna-cotta_02_jernejkitchen.jpg" alt="Dessert 7"></a>
+    <a href="recipie7.html"><h2>Panna Cotta </h2></a>
+    <p>An Italian dessert made from cooked cream, sugar, and gelatin, resulting in a silky and delicate custard-like texture. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie8.html"><img src="https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Jyothi_Rajesh/Chocolate_Souffle.jpg" alt="Dessert 8"></a>
+    <a href="recipie8.html"><h2>Chocolate Soufflé </h2></a>
+    <p>A light and airy chocolate dessert that rises in the oven, known for its impressive presentation and decadent taste. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie9.html"><img src="http://at-bangkok.com/wp-content/uploads/2015/07/Mango-Sticky-rice.jpg" alt="Dessert 9"></a>
+    <a href="recipie9.html"><h2>Mango Sticky Rice </h2></a>
+    <p>A Thai dessert that combines sweet glutinous rice with fresh mango slices, often served with a coconut milk drizzle. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie10.html"><img src="http://assets.classicfm.com/2016/34/opera-cake-1471881695.jpg" alt="Dessert 10"></a>
+    <a href="recipie10.html"><h2>Opera Cake </h2></a>
+    <p>A French pastry made of layers of almond sponge cake, coffee-flavored buttercream, and chocolate ganache, often finished with a chocolate glaze. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie11.html"><img src="https://inmamamaggieskitchen.com/wp-content/uploads/2017/10/Tres-Leches-Cake-or-Pastel-de-Tres-Leches.jpg" alt="Dessert11"></a>
+    <a href="recipie11.html"><h2>Tres Leches Cake </h2></a>
+    <p>A Latin American dessert made from sponge cake soaked in a mixture of three different types of milk—evaporated milk, condensed milk, and heavy cream. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie12.html"><img src="http://assets.epicurious.com/photos/5720fd15db3cd6fd5a7dd19d/master/pass/Fruit_berry_tart___1635-copy.jpg" alt="Dessert 12"></a>
+    <a href="recipie12.html"><h2>Fruit Tart </h2></a>
+    <p>A visually stunning dessert featuring a buttery pastry crust filled with pastry cream or custard and topped with a colorful array of fresh fruits. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie13.html"><img src="http://www.homemadeitaliancooking.com/wp-content/uploads/2016/05/3-cannoli.jpg" alt="Dessert 13"></a>
+    <a href="recipie13.html"><h2>Cannoli </h2></a>
+    <p> An Italian pastry filled with sweet ricotta cheese or mascarpone, often flavored with chocolate chips, candied fruit, or pistachios. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie14.html"><img src="https://www.tasteandtellblog.com/wp-content/uploads/2020/11/Lemon-Meringue-Pie-1.jpg" alt="Dessert 14"></a>
+    <a href="recipie14.html"><h2>Lemon Meringue Pie </h2></a>
+    <p>  A tangy and sweet pie made with a zesty lemon filling topped with a fluffy layer of toasted meringue. </p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <a href="recipie15.html"><img src="https://jamtraveltips.com/wp-content/uploads/2020/04/Chocolate-Eclairs.jpg" alt="Dessert 15"></a>
+    <a href="recipie15.html"><h2>Eclairs </h2></a>
+    <p> Long, elegant pastries made from choux pastry filled with cream and topped with a glossy chocolate glaze. </p>
+  </div>
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>

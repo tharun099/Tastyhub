@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Italian Cuisine </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    .recipe-card {
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("https://media.istockphoto.com/id/847198296/photo/different-types-of-cheeses-on-rustic-wood-table.webp?b=1&s=170667a&w=0&k=20&c=E75BrxD_NdtvqskVlokEdSFgkQHSLrb6G9H4bqBdQpA=");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Italian Cuisine</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="recipe1.html"><img src="https://zenideen.com/wp-content/uploads/2020/06/pizza-mozzarella-tomaten-scaled.jpeg" alt="Dessert 1"></a>
+    <a href="recipe1.html"><h2>Pizza Margherita</h2></a>
+    <p>A classic Neapolitan pizza topped with tomato sauce, fresh mozzarella cheese, basil leaves, and a drizzle of olive oil. It's a symbol of Italian cuisine worldwide.</p>
+  </div>
+
+  <div class="recipe-card">
+    <img src="https://keeprecipes.com/sites/keeprecipes/files/76742_1416351942_0.jpg" alt="Dessert 2">
+    <h2>Pasta Carbonara</h2>
+    <p>Pasta Carbonara is a classic Roman dish that combines simple ingredients to create a rich and flavorful pasta dish.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://thestayathomechef.com/wp-content/uploads/2017/08/Most-Amazing-Lasagna-2.jpg" alt="Dessert 3">
+    <h2>Lasagna </h2>
+    <p>A layered pasta dish consisting of sheets of lasagna noodles, Bolognese sauce (meat ragù), béchamel sauce, and grated Parmesan cheese. It's baked until bubbly and golden.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="http://www.the350degreeoven.com/wp-content/uploads/2012/05/DSC_0158fix.jpg" alt="Dessert 4">
+    <h2>Risotto </h2>
+    <p>Creamy rice dish cooked slowly with flavorful broth until it reaches a rich and velvety consistency. Variations include Risotto Milanese with saffron and Risotto alla Parmigiana.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="http://www.telegraph.co.uk/content/dam/Food%20and%20drink/scotchbeef/osso-buco-alamy-xlarge.jpg" alt="Dessert 4">
+    <h2>Ossobuco </h2>
+    <p>A Milanese specialty made from braised veal shanks cooked with white wine, broth, onions, carrots, celery, and tomatoes. It's often served with gremolata (lemon, garlic, and parsley) on top.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://easyveganinfo.com/wp-content/uploads/2020/06/Bruschetta-1-scaled-e1627502563176.jpg" alt="Dessert 4">
+    <h2>Bruschetta   </h2>
+    <p>Slices of toasted bread rubbed with garlic, drizzled with olive oil, and topped with diced tomatoes, fresh basil, and sometimes mozzarella. It's a popular appetizer.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://www.rddassociates.com/wp-content/uploads/2013/06/ravioli-w-bolgnese.jpg" alt="Dessert 4">
+    <h2>Ravioli   </h2>
+    <p>Stuffed pasta parcels typically filled with a mixture of cheese, meat, or vegetables. They can be served with various sauces, such as marinara, sage butter, or creamy Alfredo.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://blog.liebherr.com/hausgeraete/de/wp-content/uploads/sites/2/2017/08/000446_L.jpg" alt="Dessert 4">
+    <h2>Minestrone  </h2>
+    <p>A hearty vegetable soup made with a variety of seasonal vegetables, beans, and pasta, all simmered in a flavorful broth.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="http://3.bp.blogspot.com/-uSyr2Cqx5Cs/TlPIGDDR-2I/AAAAAAAAAUA/-PHZHUzy9SI/s1600/insalata-caprese-salad.jpg" alt="Dessert 4">
+    <h2>Caprese Salad  </h2>
+    <p>A simple salad from the island of Capri, featuring slices of ripe tomatoes, fresh mozzarella, basil leaves, and a drizzle of extra virgin olive oil.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="http://www.nutritiouseats.com/wp-content/uploads/2011/06/pesto-pasta-2-1.jpg" alt="Dessert 4">
+    <h2>Pesto Pasta  </h2>
+    <p>Pasta (often trofie or linguine) tossed with pesto sauce, a vibrant mixture of basil, pine nuts, garlic, Parmesan cheese, and olive oil.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="http://www.daringgourmet.com/wp-content/uploads/2015/11/Fettuccine-Alfredo-4.jpg" alt="Dessert 4">
+    <h2>Fettuccine Alfredo  </h2>
+    <p>Flat egg noodles served with a creamy sauce made from butter and Parmesan cheese. It's a rich and indulgent pasta dish.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://eatlikepinoy.com/wp-content/uploads/2020/05/cioppino-1024x640.jpg" alt="Dessert 4">
+    <h2>Cioppino  </h2>
+    <p>A seafood stew originating from San Francisco, typically made with a mix of fish, shrimp, clams, mussels, and crab, cooked in a tomato-based broth.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="http://images.huffingtonpost.com/2015-08-25-1440504123-9292441-Zuppasoup1large.jpg" alt="Dessert 4">
+    <h2>Zuppa Toscana </h2>
+    <p>A hearty Tuscan soup made with Italian sausage, potatoes, kale, and sometimes white beans. It's flavorful and warming.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://claudiafornaciari.it/wp-content/uploads/2019/06/torta-nonna-pinoli.jpg" alt="Dessert 4">
+    <h2>Torta della Nonna   </h2>
+    <p>A "Grandmother's cake" made with a pastry crust filled with rich custard cream and often topped with pine nuts and powdered sugar.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://i.etsystatic.com/29276718/r/il/1c402a/3113142679/il_1140xN.3113142679_9gvd.jpg" alt="Dessert 4">
+    <h2>Cacciatora (Chicken Cacciatore)   </h2>
+    <p>A rustic dish made with chicken cooked in a tomato-based sauce with onions, bell peppers, mushrooms, and various herbs. It's often served with pasta or crusty bread.</p>
+  </div>
+
+
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>

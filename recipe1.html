@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Recipe 1</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+
+<style>
+  body, html { height: 100% }
+  body,h1,h2,h3,h4,h5,h6 { font-family: "Amatic SC", sans-serif }
+  .recipe-container { padding: 64px 32px; }
+  .recipe-content { max-width: 1000px; margin: 0 auto; }
+  .recipe-title { font-size: 36px; text-align: center; margin-bottom: 20px; }
+  .recipe-section { margin-bottom: 40px; }
+  .recipe-section-title { font-size: 24px; font-weight: bold; margin-bottom: 10px; }
+  .recipe-ingredients { list-style: none; padding-left: 0; }
+  .recipe-ingredients li { margin-bottom: 5px; }
+  .recipe-process { margin-top: 20px; }
+  .recipe-process ol { list-style: decimal; padding-left: 40px; }
+  .recipe-nutrition { margin-top: 20px; }
+  .recipe-nutrition table { width: 100%; border-collapse: collapse; }
+  .recipe-nutrition th, .recipe-nutrition td { padding: 8px; text-align: center; border-bottom: 1px solid #ddd; }
+  .recipe-nutrition th { background-color: #f2f2f2; }
+  .recipe-nav {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+  }
+  .recipe-nav a {
+    padding: 8px 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+    margin: 0 8px;
+  }
+  .recipe-nav a:hover {
+    background-color: #f2f2f2;
+  }
+  .recipe-active {
+    background-color: #f2f2f2;
+  }
+  .recipe-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #ddd;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+  
+  }
+  .recipe-nav a {
+    cursor: pointer;
+  }
+  .recipe-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px 20px;
+    z-index: 100;
+  }
+
+  .recipe-nav a {
+    color: #fff;
+    margin-right: 20px;
+  }
+  .w3-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .w3-right a {
+    margin-left: 20px;
+  }
+
+  /* Position the like and save buttons to the right */
+  #likeButton, #saveButton {
+    margin-left: auto;
+    cursor: pointer;
+    color: #fff
+
+  }
+
+  /* Reduce the space between the like and save buttons */
+  #likeButton + #saveButton {
+    margin-left: 10px;
+    color: #fff
+  }
+
+  .recipe-section {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 64px 32px;
+  height: 100vh;
+  background-attachment: fixed; /* Set the height of each section to fill the viewport */
+  background-color: #fcce8b;
+}
+
+
+
+</style>
+
+<script>
+  function toggleSection(sectionName) {
+    var sections = document.getElementsByClassName("recipe-section");
+    for (var i = 0; i < sections.length; i++) {
+      sections[i].style.display = "none";
+    }
+
+    var navLinks = document.getElementsByClassName("recipe-nav")[0].getElementsByTagName("a");
+    for (var i = 0; i < navLinks.length; i++) {
+      navLinks[i].classList.remove("recipe-active");
+    }
+
+    document.getElementById(sectionName).style.display = "block";
+    document.querySelector('a[href="#' + sectionName + '"]').classList.add("recipe-active");
+  }
+  function scrollToSection(sectionName) {
+    var sectionElement = document.getElementById(sectionName);
+    if (sectionElement) {
+      sectionElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
+    // Like Recipe Function
+    function likeRecipe() {
+    // Add your logic here to handle the like action
+    alert("Recipe liked!");
+  }
+
+  // Save Recipe Function
+  function saveRecipe() {
+    // Add your logic here to handle the save action
+    alert("Recipe saved!");
+  }
+</script>
+
+</head>
+<body>
+
+<!-- Recipe Navigation Bar -->
+<div class="recipe-nav">
+    <a href="javascript:void(0)" onclick="scrollToSection('about')">About</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('ingredients')">Ingredients</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('process')">Process</a>
+    <a href="javascript:void(0)" onclick="scrollToSection('nutrition')">Nutrition</a>
+
+    <div class="w3-bar-item w3-button" id="likeButton" onclick="likeRecipe()">&#10084; Like</div>
+<div class="w3-bar-item w3-button" id="saveButton" onclick="saveRecipe()">&#128190; Save</div>
+
+  </div>
+  
+  
+  
+
+<!-- Recipe Content -->
+<div class="recipe-container">
+  <div class="recipe-content">
+    <h1 class="recipe-title">Macaroons</h1>
+
+
+    <!-- Recipe Image -->
+    <img src="macaroons.png" alt="Recipe 1 Photo" class="recipe-image"></div>
+
+    <!-- About Section -->
+    <div class="recipe-section" id="about" style="background-image: url('about.jpg');">
+
+    <div class="w3-container w3-padding-64  w3-grayscale w3-xlarge" id="about">
+        <h2 class="recipe-section-title">About</h2>
+      <p>Insert the description and tradition of Recipe 1 here.</p>
+    </div>
+    </div>
+
+    <!-- Ingredients Section -->
+    <div class="recipe-section" id="ingredients" style="background-image: url('ingredients.jpg');">
+
+    <div class="w3-container w3-padding-64  w3-grayscale w3-xlarge" id="ingredients">
+        <h2 class="recipe-section-title">Ingredients</h2>
+      <ul class="recipe-ingredients">
+        <li>Ingredient 1</li>
+        <li>Ingredient 2</li>
+        <li>Ingredient 3</li>
+        <!-- Add more ingredients as needed -->
+      </ul>
+    </div>
+    
+    </div>
+
+    <!-- Process Section -->
+    <div class="recipe-section" id="process" style="background-image: url('process.jpg');">
+
+    <div class="w3-container w3-padding-64  w3-grayscale w3-xlarge" id="process">
+        <h2 class="recipe-section-title">Process</h2>
+      <div class="recipe-process">
+        <ol>
+          <li>Step 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Step 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+          <li>Step 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+          <!-- Add more steps as needed -->
+        </ol>
+      </div>
+    </div>
+
+    <div class="w3-container w3-padding-64  w3-grayscale w3-xlarge" id="process">
+      <h2 class="recipe-section-title">Process</h2>
+    <div class="recipe-process">
+      <ol>
+        <li>Step 1: Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+        <li>Step 2: Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+        <li>Step 3: Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+        <!-- Add more steps as needed -->
+      </ol>
+    </div>
+  </div>
+    </div>
+
+    <!-- Nutrition Section -->
+    <div class="recipe-section" id="nutrition" style="background-image: url('nutrions.jpg');">
+
+    <div class="w3-container w3-padding-64  w3-grayscale w3-xlarge"id="nutrition">
+        <h2 class="recipe-section-title">Nutrition</h2>
+      <div class="recipe-nutrition">
+        <table>
+          <tr>
+            <th>Calories</th>
+            <th>Proteins</th>
+            <th>Carbohydrates</th>
+            <th>Fats</th>
+            <!-- Add more nutrition information as needed -->
+          </tr>
+          <tr>
+            <td>200</td>
+            <td>10g</td>
+            <td>30g</td>
+            <td>5g</td>
+          </tr>
+        </table>
+      </div>
+</div>
+    </div>
+
+
+
+  </div>
+</div>
+
+</body>
+</html>

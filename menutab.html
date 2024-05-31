@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu Bar</title>
+<style>
+  /* Your existing CSS styles */
+  body, ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    /* Base styling for the menu bar */
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      background-color: #000000;
+      color: #fff;
+      width: 250px;
+      padding-top: 20px;
+      overflow-y: auto;
+    }
+
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      margin-left: 20px;
+    }
+
+    .logo img {
+      width: 200px; /* Set the width of your logo image */
+      height: auto;
+      vertical-align: middle;
+    }
+
+    .logo-expand {
+      color: #f1f1f1;
+      text-decoration: none;
+      display: block;
+      margin-top: 10px;
+      margin-left: 20px;
+    }
+
+    .side-wrapper {
+      margin-top: 20px;
+    }
+    .side-title {
+      font-size: 16px;
+      font-weight: bold;
+      margin: 0 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #444;
+    }
+
+    .side-menu a {
+      display: flex;
+      align-items: center;
+      padding: 10px 20px;
+      color: #f1f1f1;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .sidebar-link svg {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .sidebar-link:hover {
+      background-color: #444;
+    }
+
+    .sidebar-link.is-active {
+      background-color: #1e90ff;
+    }
+</style>
+</head>
+<body>
+  <!-- Button to Toggle Menu Sidebar -->
+  <button class="toggle-button" onclick="toggleSidebar()">Toggle Menu</button>
+  
+  <!-- Main Container -->
+  <div class="main-container">
+    
+    <!-- Menu Sidebar -->
+    <div class="container">
+      <div class="sidebar">
+        <div class="logo">
+          <img src="logo.png" alt="Website Logo">
+        </div>
+  
+        <div class="side-wrapper">
+          <div class="side-title">ACCOUNT</div>
+          <div class="side-menu">
+            <div class="dropdown">
+              <a class="sidebar-link" href="#">
+                Settings
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <!-- Icon code for Settings -->
+                </svg>
+              </a>
+              <div class="dropdown-content">
+                <a href="#">Profile</a>
+                <a href="#">Privacy</a>
+                <a href="#">Notifications</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="sidebar-link" href="#">
+                Account Information
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <!-- Icon code for Account Information -->
+                </svg>
+              </a>
+              <div class="dropdown-content">
+                <a href="#">Edit Profile</a>
+                <a href="#">Change Password</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <a class="sidebar-link" href="#">
+                Logout
+                <svg viewBox="0 0 24 24" fill="currentColor">
+                  <!-- Icon code for Logout -->
+                </svg>
+              </a>
+              <div class="dropdown-content">
+                <a href="#">Are you sure?</a>
+              </div>
+            </div>
+            <!-- More category links can be added here -->
+          </div>
+        </div>
+        <!-- Rest of your menu tab content remains unchanged -->
+      </div>
+      <!-- Your existing sidebar content -->
+    </div>
+    <!-- Content Section -->
+    <div class="content">
+      <!-- Your existing content here -->
+    </div>
+  </div>
+
+  <!-- JavaScript to Toggle Sidebar -->
+  <script>
+    function toggleSidebar() {
+      const mainContainer = document.querySelector('.main-container');
+      mainContainer.classList.toggle('show-sidebar');
+    }
+  </script>
+</body>
+</html>

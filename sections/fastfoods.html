@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Fast Foods </title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amatic+SC">
+  <style>
+
+    body, html { height: 100%; }
+    body, h1, h2, h3, h4, h5, h6 { font-family: "Amatic SC", sans-serif; }
+    .header { padding: 60px; text-align: center;}
+    .header h1 { font-size: 72px; }
+    .recipe-container { padding: 40px 20px; }
+    .recipe-card { max-width: 400px; margin: 0 auto; padding: 20px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+    .recipe-card img { width: 100%; max-height: 200px; object-fit: cover; border-radius: 8px; }
+    .recipe-card h2 { font-size: 24px; margin-top: 10px; }
+    .recipe-card p { font-size: 16px; margin-top: 5px; }
+    
+      /* ... existing styles ... */
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    .recipe-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+    .recipe-card {
+      width: 30%;
+      margin: 10px 0;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 8px;
+      transition: box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .recipe-card img {
+      width: 100%;
+    }
+    .recipe-card h2 {
+      font-size: 24px;
+      margin: 10px 0;
+    }
+    .recipe-card p {
+      font-size: 16px;
+      color: #0b0b0b;
+    }
+    .recipe-card:hover {
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+    .back-link {
+      margin-top: 20px;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+  
+    }
+    .header {
+      text-align: center;
+      background-image: url("https://i.pinimg.com/236x/68/c6/f4/68c6f4e03812bd80acc5cb7e4af4f20b.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      padding: 100px 0;
+      color: #fff;
+    }
+    .header h1 {
+      font-size: 48px;
+      margin: 0;
+      padding: 0;
+    }
+    .header a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 24px;
+    }
+    .header a:hover {
+      color: #ff6f00;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="header">
+  <h1>Fast Foods</h1>
+</div>
+
+<!-- Recipe Cards -->
+<div class="recipe-container">
+  <div class="recipe-card">
+    <a href="recipe1.html"><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1998&q=80" alt="Dessert 1"></a>
+    <a href="recipe1.html"><h2>Burger and Fries</h2></a>
+    <p>A hamburger, or simply burger, is a sandwich consisting of fillings—usually a patty of ground meat, typically beef—placed inside a sliced bun or bread roll.. along with "Freakin' Hot fries </p>
+  </div>
+
+  <div class="recipe-card">
+    <img src="https://media.istockphoto.com/id/184946701/photo/pizza.jpg?s=612x612&w=0&k=20&c=97rc0VIi-s3mn4xe4xDy9S-XJ_Ohbn92XaEMaiID_eY=" alt="Dessert 2">
+    <h2>Pizza</h2>
+    <p>The authentic Italian-style pizza had a perfectly seasoned herbaceous tomato sauce and flavorful toppings.</p>
+  </div>
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/135849804/photo/sushi.jpg?s=612x612&w=0&k=20&c=GsScECjr2Saef-WibQe6goRwJ9wAcfWYuABCXZ3lyIg=" alt="Dessert 3">
+    <h2>Sushi </h2>
+    <p>Sushi is a small roll of rice that is combined with raw fish, seaweed, cucumber, and vegetables, amongst other ingredients.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/960337396/photo/spicy-homemade-beef-barbacoa-tacos.jpg?s=612x612&w=0&k=20&c=RqG71p_itTD_EjncyMR0_5qoHlgjUk0f_-pkww503eQ=" alt="Dessert 4">
+    <h2>Tacos </h2>
+    <p>A taco is a traditional Mexican dish consisting of a corn or wheat tortilla that is folded or rolled around a filling, which typically includes meat, cheese, lettuce, and tomato.</p>
+  </div>
+
+  <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1412456701/photo/hot-and-spicy-shawarma-wrap-served-in-a-cutting-board-on-grey-background-side-view-of-fastfood.jpg?s=612x612&w=0&k=20&c=tKhtzP3Ga45YyQ9AnAuCvtQnVuXLgn2BOeVe355KAuM=" alt="Dessert 4">
+    <h2>Shawarma </h2>
+    <p>shawarma is a popular Middle Eastern meal that is made from marinated meat, such as lamb, beef, and chicken. It is one of the world's most popular street foods.</p>
+  </div>
+      
+
+      
+        <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/516957550/photo/sprouts-avocado-tomato-spinach-chickpeas-burger-rye-sandwich.jpg?s=612x612&w=0&k=20&c=aTv5VagLwEb8niNP_DyTsJlrTPnd71IgdTxmTWIXTuE=" alt="Dessert 5">
+    <h2>sandwich </h2>
+    <p>sandwich is a food typically consisting of vegetables, sliced cheese or meat, placed on or between slices of bread</p>
+      
+     </div> 
+
+     <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1081828956/photo/spicy-barbecued-chicken-tikka-boti-on-skewers-served-in-a-plate-with-green-chutney-selective.jpg?s=612x612&w=0&k=20&c=oNYrfh_7MfvueO8Taw38EWJ4MuuHoYyLCJhsidJwyII=" alt="Dessert 6">
+    <h2>kebab </h2>
+    <p>A typical kebab consists of bread stuffed with döner meat shavings, lettuce, sliced tomato and onions, with a choice of sauce including sauce blanche, a mayo-yogurt sauce.</p>   
+
+  </div>
+
+ 
+    
+       <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/1398144512/photo/curd-samosa-chaat.jpg?s=612x612&w=0&k=20&c=xK1s-kE92oaLAkdmgTm3uZ_TZghVLrbGya2FIBmF0ZQ=" alt="Dessert 4">
+    <h2>  samosa </h2>
+    <p> samosa is a tasty Indian dish, a little pocket of fried dough filled with spiced potato and peas. The next time you eat at an Indian restaurant, try some samosas as an appetizer.</p>
+  </div>
+
+        <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://images.unsplash.com/photo-1547058881-aa0edd92aab3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8RmFsYWZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Dessert 5">
+    <h2>falafel </h2>
+    <p>Falafel are deep-fried balls or patties made from chickpeas or fava beans, sometimes both, plus fresh herbs and spices.</p>
+    
+    </div>
+    
+     <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.istockphoto.com/id/484992252/photo/homemade-bacon-wrapped-hot-dogs.webp?b=1&s=170667a&w=0&k=20&c=XRletcylfko5Y4lqj-onHT-JLpZ5wUHzeG-b0x22Pt8=" alt="Dessert 5">
+    <h2>hotdogs </h2>
+    <p>A hot dog (commonly spelled hotdog) is a food consisting of a grilled or steamed sausage served in the slit of a partially sliced bun..</p>
+   </div>
+      
+       <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://images.unsplash.com/photo-1585032226651-759b368d7246?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8bm9vZGxlc3xlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=500&q=60" alt="Dessert 5">
+    <h2>noodles </h2>
+    <p>noodle, a cooked egg-and-flour paste prominent in European and Asian cuisine, generally distinguished from pasta by its elongated ribbonlike form.</p>
+   </div>  
+
+     <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://images.unsplash.com/photo-1608897013039-887f21d8c804?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Nnx8cGFzdGF8ZW58MHx8MHx8fDA%3D&auto=format&fit=crop&w=500&q=60" alt="Dessert 5">
+    <h2>pasta </h2>
+    <p>Pasta is a type of food made from a mixture of flour, eggs, and water that is formed into different shapes and then boiled. </p>
+   </div>
+      
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://img.freepik.com/free-photo/plate-food-with-side-sauce_188544-8402.jpg?w=1380&t=st=1693030859~exp=1693031459~hmac=9e66bce9bdc89625d277010efc990994a4295f4a58374a73b4f58df5525f26d0" alt="Dessert 5">
+    <h2>spring rolls </h2>
+    <p>Spring roll is a traditional Chinese savory snack where a pastry sheet is filled with vegetables, rolled & fried </p>
+   </div>
+
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://t3.ftcdn.net/jpg/02/17/01/70/240_F_217017083_cevsQZ5r7wx2omflj5KF46YVwCEWHQTj.jpg" alt="Dessert 5">
+    <h2>churro</h2>
+    <p>Churros are ridged sticks of deep-fried choux pastry dough coated in cinnamon sugar. </p>
+   </div>
+     
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://t3.ftcdn.net/jpg/05/43/38/98/240_F_543389858_8dxZmRseOPPuasBMace26fafDiK9arag.jpg" alt="Dessert 5">
+    <h2>Pav Bhaji</h2>
+    <p>Pav bhaji is a spiced mixture of mashed vegetables in a thick gravy served with bread. </p>
+   </div>
+
+   <div class="recipe-card" onclick="redirectToProject()">
+    <img src="https://media.gettyimages.com/id/154003628/photo/sev-puri-or-golgappa-chaat.jpg?s=612x612&w=0&k=20&c=De_Tc2lkUV769YDfY6LWALIksPhdqkRmeWRXY1xCBsk=" alt="Dessert 5">
+    <h2>panipuri</h2>
+    <p>Panipuri ( pānīpūrī (help·info)) is deep-fried breaded sphere filled with potato, onion, or chickpea. It is a common street food in the Indian  </p>
+   </div>
+
+
+  <!-- Add more recipe cards here -->
+
+</div>
+
+</script>
+</body>
+</html>
